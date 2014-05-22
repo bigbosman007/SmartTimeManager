@@ -15,7 +15,7 @@ namespace STmanager
     {
         public frmMain()
         {
-            InitializeComponent()๗๗;
+            InitializeComponent();
         }
     }
 }
