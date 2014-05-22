@@ -11,9 +11,9 @@ using MetroFramework.Forms;
 
 namespace STmanager
 {
-    public partial class Form1 : MetroForm
+    public partial class frmMain : MetroForm
     {
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
         }
