@@ -1,0 +1,870 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="smarttime_storeModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="branch">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="branch_name" Type="varchar" MaxLength="45" />
+          <Property Name="branch_tel" Type="varchar" MaxLength="45" />
+          <Property Name="branch_add" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="branchinventory">
+          <Key>
+            <PropertyRef Name="bi_id" />
+            <PropertyRef Name="Branch_branch_id" />
+            <PropertyRef Name="Goods_goods_id" />
+            <PropertyRef Name="Goods_Model_mod_id" />
+            <PropertyRef Name="Goods_Model_Brand_brand_id" />
+          </Key>
+          <Property Name="bi_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bi_goods_amount" Type="int" />
+          <Property Name="Branch_branch_id" Type="int" Nullable="false" />
+          <Property Name="Goods_goods_id" Type="int" Nullable="false" />
+          <Property Name="Goods_Model_mod_id" Type="int" Nullable="false" />
+          <Property Name="Goods_Model_Brand_brand_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="brand">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="brand_name" Type="varchar" MaxLength="45" />
+        </EntityType>
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+            <PropertyRef Name="Branch_branch_id" />
+          </Key>
+          <Property Name="emp_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="emp_name" Type="varchar" MaxLength="45" />
+          <Property Name="emp_last" Type="varchar" MaxLength="45" />
+          <Property Name="emp_tel" Type="varchar" MaxLength="45" />
+          <Property Name="Branch_branch_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="goods">
+          <Key>
+            <PropertyRef Name="goods_id" />
+            <PropertyRef Name="Model_mod_id" />
+            <PropertyRef Name="Model_Brand_brand_id" />
+          </Key>
+          <Property Name="goods_id" Type="int" Nullable="false" />
+          <Property Name="goods_name" Type="varchar" MaxLength="45" />
+          <Property Name="goods_price" Type="varchar" MaxLength="45" />
+          <Property Name="Model_mod_id" Type="int" Nullable="false" />
+          <Property Name="Model_Brand_brand_id" Type="int" Nullable="false" />
+          <Property Name="goods_img" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="model">
+          <Key>
+            <PropertyRef Name="mod_id" />
+            <PropertyRef Name="Brand_brand_id" />
+          </Key>
+          <Property Name="mod_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mod_name" Type="varchar" MaxLength="45" />
+          <Property Name="Brand_brand_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sale">
+          <Key>
+            <PropertyRef Name="sale_id" />
+            <PropertyRef Name="Employee_emp_id" />
+            <PropertyRef Name="Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="sale_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="sale_date" Type="date" />
+          <Property Name="Salecol" Type="varchar" MaxLength="45" />
+          <Property Name="Employee_emp_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Employee_Branch_branch_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="saledetail">
+          <Key>
+            <PropertyRef Name="sd_id" />
+            <PropertyRef Name="BranchInventory_bi_id" />
+            <PropertyRef Name="BranchInventory_Branch_branch_id" />
+            <PropertyRef Name="BranchInventory_Goods_goods_id" />
+            <PropertyRef Name="BranchInventory_Goods_Model_mod_id" />
+            <PropertyRef Name="BranchInventory_Goods_Model_Brand_brand_id" />
+            <PropertyRef Name="Sale_sale_id" />
+            <PropertyRef Name="Sale_Employee_emp_id" />
+            <PropertyRef Name="Sale_Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="sd_id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="sd_goods_amount" Type="int" />
+          <Property Name="BranchInventory_bi_id" Type="int" Nullable="false" />
+          <Property Name="BranchInventory_Branch_branch_id" Type="int" Nullable="false" />
+          <Property Name="BranchInventory_Goods_goods_id" Type="int" Nullable="false" />
+          <Property Name="BranchInventory_Goods_Model_mod_id" Type="int" Nullable="false" />
+          <Property Name="BranchInventory_Goods_Model_Brand_brand_id" Type="int" Nullable="false" />
+          <Property Name="Sale_sale_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Sale_Employee_emp_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Sale_Employee_Branch_branch_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="shipping">
+          <Key>
+            <PropertyRef Name="ship_id" />
+            <PropertyRef Name="Employee_emp_id" />
+            <PropertyRef Name="Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="ship_id" Type="int" Nullable="false" />
+          <Property Name="ship_date" Type="varchar" MaxLength="45" />
+          <Property Name="Employee_emp_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Employee_Branch_branch_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="shippingdetail">
+          <Key>
+            <PropertyRef Name="sd_id" />
+            <PropertyRef Name="Shipping_ship_id" />
+            <PropertyRef Name="Shipping_Employee_emp_id" />
+            <PropertyRef Name="Shipping_Employee_Branch_branch_id" />
+            <PropertyRef Name="Goods_goods_id" />
+            <PropertyRef Name="Goods_Model_mod_id" />
+            <PropertyRef Name="Goods_Model_Brand_brand_id" />
+          </Key>
+          <Property Name="sd_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sd_goods_amount" Type="int" />
+          <Property Name="Shipping_ship_id" Type="int" Nullable="false" />
+          <Property Name="Shipping_Employee_emp_id" Type="varchar" MaxLength="45" Nullable="false" />
+          <Property Name="Shipping_Employee_Branch_branch_id" Type="int" Nullable="false" />
+          <Property Name="Goods_goods_id" Type="int" Nullable="false" />
+          <Property Name="Goods_Model_mod_id" Type="int" Nullable="false" />
+          <Property Name="Goods_Model_Brand_brand_id" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_BranchInventory_Branch1">
+          <End Role="branch" Type="Self.branch" Multiplicity="1" />
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branch">
+              <PropertyRef Name="branch_id" />
+            </Principal>
+            <Dependent Role="branchinventory">
+              <PropertyRef Name="Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_BranchInventory_Goods1">
+          <End Role="goods" Type="Self.goods" Multiplicity="1" />
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="goods">
+              <PropertyRef Name="goods_id" />
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="branchinventory">
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Branch1">
+          <End Role="branch" Type="Self.branch" Multiplicity="1" />
+          <End Role="employee" Type="Self.employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branch">
+              <PropertyRef Name="branch_id" />
+            </Principal>
+            <Dependent Role="employee">
+              <PropertyRef Name="Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Gen_Brand">
+          <End Role="brand" Type="Self.brand" Multiplicity="1" />
+          <End Role="model" Type="Self.model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="brand">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="model">
+              <PropertyRef Name="Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Model1">
+          <End Role="model" Type="Self.model" Multiplicity="1" />
+          <End Role="goods" Type="Self.goods" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="model">
+              <PropertyRef Name="mod_id" />
+              <PropertyRef Name="Brand_brand_id" />
+            </Principal>
+            <Dependent Role="goods">
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sale_Employee1">
+          <End Role="employee" Type="Self.employee" Multiplicity="1" />
+          <End Role="sale" Type="Self.sale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employee">
+              <PropertyRef Name="emp_id" />
+              <PropertyRef Name="Branch_branch_id" />
+            </Principal>
+            <Dependent Role="sale">
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SaleDetail_BranchInventory1">
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="1" />
+          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branchinventory">
+              <PropertyRef Name="bi_id" />
+              <PropertyRef Name="Branch_branch_id" />
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="saledetail">
+              <PropertyRef Name="BranchInventory_bi_id" />
+              <PropertyRef Name="BranchInventory_Branch_branch_id" />
+              <PropertyRef Name="BranchInventory_Goods_goods_id" />
+              <PropertyRef Name="BranchInventory_Goods_Model_mod_id" />
+              <PropertyRef Name="BranchInventory_Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SaleDetail_Sale1">
+          <End Role="sale" Type="Self.sale" Multiplicity="1" />
+          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sale">
+              <PropertyRef Name="sale_id" />
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Principal>
+            <Dependent Role="saledetail">
+              <PropertyRef Name="Sale_sale_id" />
+              <PropertyRef Name="Sale_Employee_emp_id" />
+              <PropertyRef Name="Sale_Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipping_Employee1">
+          <End Role="employee" Type="Self.employee" Multiplicity="1" />
+          <End Role="shipping" Type="Self.shipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employee">
+              <PropertyRef Name="emp_id" />
+              <PropertyRef Name="Branch_branch_id" />
+            </Principal>
+            <Dependent Role="shipping">
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ShippingDetail_Goods1">
+          <End Role="goods" Type="Self.goods" Multiplicity="1" />
+          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="goods">
+              <PropertyRef Name="goods_id" />
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="shippingdetail">
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ShippingDetail_Shipping1">
+          <End Role="shipping" Type="Self.shipping" Multiplicity="1" />
+          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="shipping">
+              <PropertyRef Name="ship_id" />
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Principal>
+            <Dependent Role="shippingdetail">
+              <PropertyRef Name="Shipping_ship_id" />
+              <PropertyRef Name="Shipping_Employee_emp_id" />
+              <PropertyRef Name="Shipping_Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="smarttime_storeModelStoreContainer">
+          <EntitySet Name="branch" EntityType="Self.branch" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="branchinventory" EntityType="Self.branchinventory" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="brand" EntityType="Self.brand" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="employee" EntityType="Self.employee" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="goods" EntityType="Self.goods" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="model" EntityType="Self.model" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="sale" EntityType="Self.sale" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="saledetail" EntityType="Self.saledetail" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="shipping" EntityType="Self.shipping" Schema="smarttime_store" store:Type="Tables" />
+          <EntitySet Name="shippingdetail" EntityType="Self.shippingdetail" Schema="smarttime_store" store:Type="Tables" />
+          <AssociationSet Name="fk_BranchInventory_Branch1" Association="Self.fk_BranchInventory_Branch1">
+            <End Role="branch" EntitySet="branch" />
+            <End Role="branchinventory" EntitySet="branchinventory" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BranchInventory_Goods1" Association="Self.fk_BranchInventory_Goods1">
+            <End Role="goods" EntitySet="goods" />
+            <End Role="branchinventory" EntitySet="branchinventory" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Branch1" Association="Self.fk_Employee_Branch1">
+            <End Role="branch" EntitySet="branch" />
+            <End Role="employee" EntitySet="employee" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Gen_Brand" Association="Self.fk_Gen_Brand">
+            <End Role="brand" EntitySet="brand" />
+            <End Role="model" EntitySet="model" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Model1" Association="Self.fk_Goods_Model1">
+            <End Role="model" EntitySet="model" />
+            <End Role="goods" EntitySet="goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sale_Employee1" Association="Self.fk_Sale_Employee1">
+            <End Role="employee" EntitySet="employee" />
+            <End Role="sale" EntitySet="sale" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SaleDetail_BranchInventory1" Association="Self.fk_SaleDetail_BranchInventory1">
+            <End Role="branchinventory" EntitySet="branchinventory" />
+            <End Role="saledetail" EntitySet="saledetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SaleDetail_Sale1" Association="Self.fk_SaleDetail_Sale1">
+            <End Role="sale" EntitySet="sale" />
+            <End Role="saledetail" EntitySet="saledetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipping_Employee1" Association="Self.fk_Shipping_Employee1">
+            <End Role="employee" EntitySet="employee" />
+            <End Role="shipping" EntitySet="shipping" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ShippingDetail_Goods1" Association="Self.fk_ShippingDetail_Goods1">
+            <End Role="goods" EntitySet="goods" />
+            <End Role="shippingdetail" EntitySet="shippingdetail" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ShippingDetail_Shipping1" Association="Self.fk_ShippingDetail_Shipping1">
+            <End Role="shipping" EntitySet="shipping" />
+            <End Role="shippingdetail" EntitySet="shippingdetail" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="smarttime_storeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="branch">
+          <Key>
+            <PropertyRef Name="branch_id" />
+          </Key>
+          <Property Name="branch_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="branch_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="branch_tel" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="branch_add" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="branchinventories" Relationship="Self.fk_BranchInventory_Branch1" FromRole="branch" ToRole="branchinventory" />
+          <NavigationProperty Name="employees" Relationship="Self.fk_Employee_Branch1" FromRole="branch" ToRole="employee" />
+        </EntityType>
+        <EntityType Name="branchinventory">
+          <Key>
+            <PropertyRef Name="bi_id" />
+            <PropertyRef Name="Branch_branch_id" />
+            <PropertyRef Name="Goods_goods_id" />
+            <PropertyRef Name="Goods_Model_mod_id" />
+            <PropertyRef Name="Goods_Model_Brand_brand_id" />
+          </Key>
+          <Property Name="bi_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bi_goods_amount" Type="Int32" />
+          <Property Name="Branch_branch_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_goods_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_Model_mod_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_Model_Brand_brand_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="branch" Relationship="Self.fk_BranchInventory_Branch1" FromRole="branchinventory" ToRole="branch" />
+          <NavigationProperty Name="good" Relationship="Self.fk_BranchInventory_Goods1" FromRole="branchinventory" ToRole="goods" />
+          <NavigationProperty Name="saledetails" Relationship="Self.fk_SaleDetail_BranchInventory1" FromRole="branchinventory" ToRole="saledetail" />
+        </EntityType>
+        <EntityType Name="brand">
+          <Key>
+            <PropertyRef Name="brand_id" />
+          </Key>
+          <Property Name="brand_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="brand_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="models" Relationship="Self.fk_Gen_Brand" FromRole="brand" ToRole="model" />
+        </EntityType>
+        <EntityType Name="employee">
+          <Key>
+            <PropertyRef Name="emp_id" />
+            <PropertyRef Name="Branch_branch_id" />
+          </Key>
+          <Property Name="emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="emp_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="emp_last" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="emp_tel" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Branch_branch_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="branch" Relationship="Self.fk_Employee_Branch1" FromRole="employee" ToRole="branch" />
+          <NavigationProperty Name="sales" Relationship="Self.fk_Sale_Employee1" FromRole="employee" ToRole="sale" />
+          <NavigationProperty Name="shippings" Relationship="Self.fk_Shipping_Employee1" FromRole="employee" ToRole="shipping" />
+        </EntityType>
+        <EntityType Name="good">
+          <Key>
+            <PropertyRef Name="goods_id" />
+            <PropertyRef Name="Model_mod_id" />
+            <PropertyRef Name="Model_Brand_brand_id" />
+          </Key>
+          <Property Name="goods_id" Type="Int32" Nullable="false" />
+          <Property Name="goods_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="goods_price" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Model_mod_id" Type="Int32" Nullable="false" />
+          <Property Name="Model_Brand_brand_id" Type="Int32" Nullable="false" />
+          <Property Name="goods_img" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="branchinventories" Relationship="Self.fk_BranchInventory_Goods1" FromRole="goods" ToRole="branchinventory" />
+          <NavigationProperty Name="model" Relationship="Self.fk_Goods_Model1" FromRole="goods" ToRole="model" />
+          <NavigationProperty Name="shippingdetails" Relationship="Self.fk_ShippingDetail_Goods1" FromRole="goods" ToRole="shippingdetail" />
+        </EntityType>
+        <EntityType Name="model">
+          <Key>
+            <PropertyRef Name="mod_id" />
+            <PropertyRef Name="Brand_brand_id" />
+          </Key>
+          <Property Name="mod_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mod_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Brand_brand_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="brand" Relationship="Self.fk_Gen_Brand" FromRole="model" ToRole="brand" />
+          <NavigationProperty Name="goods" Relationship="Self.fk_Goods_Model1" FromRole="model" ToRole="goods" />
+        </EntityType>
+        <EntityType Name="sale">
+          <Key>
+            <PropertyRef Name="sale_id" />
+            <PropertyRef Name="Employee_emp_id" />
+            <PropertyRef Name="Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="sale_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sale_date" Type="DateTime" />
+          <Property Name="Salecol" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Employee_emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Employee_Branch_branch_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="employee" Relationship="Self.fk_Sale_Employee1" FromRole="sale" ToRole="employee" />
+          <NavigationProperty Name="saledetails" Relationship="Self.fk_SaleDetail_Sale1" FromRole="sale" ToRole="saledetail" />
+        </EntityType>
+        <EntityType Name="saledetail">
+          <Key>
+            <PropertyRef Name="sd_id" />
+            <PropertyRef Name="BranchInventory_bi_id" />
+            <PropertyRef Name="BranchInventory_Branch_branch_id" />
+            <PropertyRef Name="BranchInventory_Goods_goods_id" />
+            <PropertyRef Name="BranchInventory_Goods_Model_mod_id" />
+            <PropertyRef Name="BranchInventory_Goods_Model_Brand_brand_id" />
+            <PropertyRef Name="Sale_sale_id" />
+            <PropertyRef Name="Sale_Employee_emp_id" />
+            <PropertyRef Name="Sale_Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="sd_id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sd_goods_amount" Type="Int32" />
+          <Property Name="BranchInventory_bi_id" Type="Int32" Nullable="false" />
+          <Property Name="BranchInventory_Branch_branch_id" Type="Int32" Nullable="false" />
+          <Property Name="BranchInventory_Goods_goods_id" Type="Int32" Nullable="false" />
+          <Property Name="BranchInventory_Goods_Model_mod_id" Type="Int32" Nullable="false" />
+          <Property Name="BranchInventory_Goods_Model_Brand_brand_id" Type="Int32" Nullable="false" />
+          <Property Name="Sale_sale_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sale_Employee_emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Sale_Employee_Branch_branch_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="branchinventory" Relationship="Self.fk_SaleDetail_BranchInventory1" FromRole="saledetail" ToRole="branchinventory" />
+          <NavigationProperty Name="sale" Relationship="Self.fk_SaleDetail_Sale1" FromRole="saledetail" ToRole="sale" />
+        </EntityType>
+        <EntityType Name="shipping">
+          <Key>
+            <PropertyRef Name="ship_id" />
+            <PropertyRef Name="Employee_emp_id" />
+            <PropertyRef Name="Employee_Branch_branch_id" />
+          </Key>
+          <Property Name="ship_id" Type="Int32" Nullable="false" />
+          <Property Name="ship_date" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Employee_emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Employee_Branch_branch_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="employee" Relationship="Self.fk_Shipping_Employee1" FromRole="shipping" ToRole="employee" />
+          <NavigationProperty Name="shippingdetails" Relationship="Self.fk_ShippingDetail_Shipping1" FromRole="shipping" ToRole="shippingdetail" />
+        </EntityType>
+        <EntityType Name="shippingdetail">
+          <Key>
+            <PropertyRef Name="sd_id" />
+            <PropertyRef Name="Shipping_ship_id" />
+            <PropertyRef Name="Shipping_Employee_emp_id" />
+            <PropertyRef Name="Shipping_Employee_Branch_branch_id" />
+            <PropertyRef Name="Goods_goods_id" />
+            <PropertyRef Name="Goods_Model_mod_id" />
+            <PropertyRef Name="Goods_Model_Brand_brand_id" />
+          </Key>
+          <Property Name="sd_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sd_goods_amount" Type="Int32" />
+          <Property Name="Shipping_ship_id" Type="Int32" Nullable="false" />
+          <Property Name="Shipping_Employee_emp_id" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Shipping_Employee_Branch_branch_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_goods_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_Model_mod_id" Type="Int32" Nullable="false" />
+          <Property Name="Goods_Model_Brand_brand_id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="good" Relationship="Self.fk_ShippingDetail_Goods1" FromRole="shippingdetail" ToRole="goods" />
+          <NavigationProperty Name="shipping" Relationship="Self.fk_ShippingDetail_Shipping1" FromRole="shippingdetail" ToRole="shipping" />
+        </EntityType>
+        <Association Name="fk_BranchInventory_Branch1">
+          <End Role="branch" Type="Self.branch" Multiplicity="1" />
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branch">
+              <PropertyRef Name="branch_id" />
+            </Principal>
+            <Dependent Role="branchinventory">
+              <PropertyRef Name="Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Employee_Branch1">
+          <End Role="branch" Type="Self.branch" Multiplicity="1" />
+          <End Role="employee" Type="Self.employee" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branch">
+              <PropertyRef Name="branch_id" />
+            </Principal>
+            <Dependent Role="employee">
+              <PropertyRef Name="Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_BranchInventory_Goods1">
+          <End Role="goods" Type="Self.good" Multiplicity="1" />
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="goods">
+              <PropertyRef Name="goods_id" />
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="branchinventory">
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SaleDetail_BranchInventory1">
+          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="1" />
+          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="branchinventory">
+              <PropertyRef Name="bi_id" />
+              <PropertyRef Name="Branch_branch_id" />
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="saledetail">
+              <PropertyRef Name="BranchInventory_bi_id" />
+              <PropertyRef Name="BranchInventory_Branch_branch_id" />
+              <PropertyRef Name="BranchInventory_Goods_goods_id" />
+              <PropertyRef Name="BranchInventory_Goods_Model_mod_id" />
+              <PropertyRef Name="BranchInventory_Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Gen_Brand">
+          <End Role="brand" Type="Self.brand" Multiplicity="1" />
+          <End Role="model" Type="Self.model" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="brand">
+              <PropertyRef Name="brand_id" />
+            </Principal>
+            <Dependent Role="model">
+              <PropertyRef Name="Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Sale_Employee1">
+          <End Role="employee" Type="Self.employee" Multiplicity="1" />
+          <End Role="sale" Type="Self.sale" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employee">
+              <PropertyRef Name="emp_id" />
+              <PropertyRef Name="Branch_branch_id" />
+            </Principal>
+            <Dependent Role="sale">
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Shipping_Employee1">
+          <End Role="employee" Type="Self.employee" Multiplicity="1" />
+          <End Role="shipping" Type="Self.shipping" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employee">
+              <PropertyRef Name="emp_id" />
+              <PropertyRef Name="Branch_branch_id" />
+            </Principal>
+            <Dependent Role="shipping">
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_Goods_Model1">
+          <End Role="model" Type="Self.model" Multiplicity="1" />
+          <End Role="goods" Type="Self.good" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="model">
+              <PropertyRef Name="mod_id" />
+              <PropertyRef Name="Brand_brand_id" />
+            </Principal>
+            <Dependent Role="goods">
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ShippingDetail_Goods1">
+          <End Role="goods" Type="Self.good" Multiplicity="1" />
+          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="goods">
+              <PropertyRef Name="goods_id" />
+              <PropertyRef Name="Model_mod_id" />
+              <PropertyRef Name="Model_Brand_brand_id" />
+            </Principal>
+            <Dependent Role="shippingdetail">
+              <PropertyRef Name="Goods_goods_id" />
+              <PropertyRef Name="Goods_Model_mod_id" />
+              <PropertyRef Name="Goods_Model_Brand_brand_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_SaleDetail_Sale1">
+          <End Role="sale" Type="Self.sale" Multiplicity="1" />
+          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sale">
+              <PropertyRef Name="sale_id" />
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Principal>
+            <Dependent Role="saledetail">
+              <PropertyRef Name="Sale_sale_id" />
+              <PropertyRef Name="Sale_Employee_emp_id" />
+              <PropertyRef Name="Sale_Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_ShippingDetail_Shipping1">
+          <End Role="shipping" Type="Self.shipping" Multiplicity="1" />
+          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="shipping">
+              <PropertyRef Name="ship_id" />
+              <PropertyRef Name="Employee_emp_id" />
+              <PropertyRef Name="Employee_Branch_branch_id" />
+            </Principal>
+            <Dependent Role="shippingdetail">
+              <PropertyRef Name="Shipping_ship_id" />
+              <PropertyRef Name="Shipping_Employee_emp_id" />
+              <PropertyRef Name="Shipping_Employee_Branch_branch_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="smarttime_storeEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="branches" EntityType="Self.branch" />
+          <EntitySet Name="branchinventories" EntityType="Self.branchinventory" />
+          <EntitySet Name="brands" EntityType="Self.brand" />
+          <EntitySet Name="employees" EntityType="Self.employee" />
+          <EntitySet Name="goods" EntityType="Self.good" />
+          <EntitySet Name="models" EntityType="Self.model" />
+          <EntitySet Name="sales" EntityType="Self.sale" />
+          <EntitySet Name="saledetails" EntityType="Self.saledetail" />
+          <EntitySet Name="shippings" EntityType="Self.shipping" />
+          <EntitySet Name="shippingdetails" EntityType="Self.shippingdetail" />
+          <AssociationSet Name="fk_BranchInventory_Branch1" Association="Self.fk_BranchInventory_Branch1">
+            <End Role="branch" EntitySet="branches" />
+            <End Role="branchinventory" EntitySet="branchinventories" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Employee_Branch1" Association="Self.fk_Employee_Branch1">
+            <End Role="branch" EntitySet="branches" />
+            <End Role="employee" EntitySet="employees" />
+          </AssociationSet>
+          <AssociationSet Name="fk_BranchInventory_Goods1" Association="Self.fk_BranchInventory_Goods1">
+            <End Role="goods" EntitySet="goods" />
+            <End Role="branchinventory" EntitySet="branchinventories" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SaleDetail_BranchInventory1" Association="Self.fk_SaleDetail_BranchInventory1">
+            <End Role="branchinventory" EntitySet="branchinventories" />
+            <End Role="saledetail" EntitySet="saledetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Gen_Brand" Association="Self.fk_Gen_Brand">
+            <End Role="brand" EntitySet="brands" />
+            <End Role="model" EntitySet="models" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Sale_Employee1" Association="Self.fk_Sale_Employee1">
+            <End Role="employee" EntitySet="employees" />
+            <End Role="sale" EntitySet="sales" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Shipping_Employee1" Association="Self.fk_Shipping_Employee1">
+            <End Role="employee" EntitySet="employees" />
+            <End Role="shipping" EntitySet="shippings" />
+          </AssociationSet>
+          <AssociationSet Name="fk_Goods_Model1" Association="Self.fk_Goods_Model1">
+            <End Role="model" EntitySet="models" />
+            <End Role="goods" EntitySet="goods" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ShippingDetail_Goods1" Association="Self.fk_ShippingDetail_Goods1">
+            <End Role="goods" EntitySet="goods" />
+            <End Role="shippingdetail" EntitySet="shippingdetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_SaleDetail_Sale1" Association="Self.fk_SaleDetail_Sale1">
+            <End Role="sale" EntitySet="sales" />
+            <End Role="saledetail" EntitySet="saledetails" />
+          </AssociationSet>
+          <AssociationSet Name="fk_ShippingDetail_Shipping1" Association="Self.fk_ShippingDetail_Shipping1">
+            <End Role="shipping" EntitySet="shippings" />
+            <End Role="shippingdetail" EntitySet="shippingdetails" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="smarttime_storeModelStoreContainer" CdmEntityContainer="smarttime_storeEntities">
+          <EntitySetMapping Name="branches">
+            <EntityTypeMapping TypeName="smarttime_storeModel.branch">
+              <MappingFragment StoreEntitySet="branch">
+                <ScalarProperty Name="branch_id" ColumnName="branch_id" />
+                <ScalarProperty Name="branch_name" ColumnName="branch_name" />
+                <ScalarProperty Name="branch_tel" ColumnName="branch_tel" />
+                <ScalarProperty Name="branch_add" ColumnName="branch_add" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="branchinventories">
+            <EntityTypeMapping TypeName="smarttime_storeModel.branchinventory">
+              <MappingFragment StoreEntitySet="branchinventory">
+                <ScalarProperty Name="bi_id" ColumnName="bi_id" />
+                <ScalarProperty Name="bi_goods_amount" ColumnName="bi_goods_amount" />
+                <ScalarProperty Name="Branch_branch_id" ColumnName="Branch_branch_id" />
+                <ScalarProperty Name="Goods_goods_id" ColumnName="Goods_goods_id" />
+                <ScalarProperty Name="Goods_Model_mod_id" ColumnName="Goods_Model_mod_id" />
+                <ScalarProperty Name="Goods_Model_Brand_brand_id" ColumnName="Goods_Model_Brand_brand_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="brands">
+            <EntityTypeMapping TypeName="smarttime_storeModel.brand">
+              <MappingFragment StoreEntitySet="brand">
+                <ScalarProperty Name="brand_id" ColumnName="brand_id" />
+                <ScalarProperty Name="brand_name" ColumnName="brand_name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employees">
+            <EntityTypeMapping TypeName="smarttime_storeModel.employee">
+              <MappingFragment StoreEntitySet="employee">
+                <ScalarProperty Name="emp_id" ColumnName="emp_id" />
+                <ScalarProperty Name="emp_name" ColumnName="emp_name" />
+                <ScalarProperty Name="emp_last" ColumnName="emp_last" />
+                <ScalarProperty Name="emp_tel" ColumnName="emp_tel" />
+                <ScalarProperty Name="Branch_branch_id" ColumnName="Branch_branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="goods">
+            <EntityTypeMapping TypeName="smarttime_storeModel.good">
+              <MappingFragment StoreEntitySet="goods">
+                <ScalarProperty Name="goods_id" ColumnName="goods_id" />
+                <ScalarProperty Name="goods_name" ColumnName="goods_name" />
+                <ScalarProperty Name="goods_price" ColumnName="goods_price" />
+                <ScalarProperty Name="Model_mod_id" ColumnName="Model_mod_id" />
+                <ScalarProperty Name="Model_Brand_brand_id" ColumnName="Model_Brand_brand_id" />
+                <ScalarProperty Name="goods_img" ColumnName="goods_img" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="models">
+            <EntityTypeMapping TypeName="smarttime_storeModel.model">
+              <MappingFragment StoreEntitySet="model">
+                <ScalarProperty Name="mod_id" ColumnName="mod_id" />
+                <ScalarProperty Name="mod_name" ColumnName="mod_name" />
+                <ScalarProperty Name="Brand_brand_id" ColumnName="Brand_brand_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sales">
+            <EntityTypeMapping TypeName="smarttime_storeModel.sale">
+              <MappingFragment StoreEntitySet="sale">
+                <ScalarProperty Name="sale_id" ColumnName="sale_id" />
+                <ScalarProperty Name="sale_date" ColumnName="sale_date" />
+                <ScalarProperty Name="Salecol" ColumnName="Salecol" />
+                <ScalarProperty Name="Employee_emp_id" ColumnName="Employee_emp_id" />
+                <ScalarProperty Name="Employee_Branch_branch_id" ColumnName="Employee_Branch_branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="saledetails">
+            <EntityTypeMapping TypeName="smarttime_storeModel.saledetail">
+              <MappingFragment StoreEntitySet="saledetail">
+                <ScalarProperty Name="sd_id" ColumnName="sd_id" />
+                <ScalarProperty Name="sd_goods_amount" ColumnName="sd_goods_amount" />
+                <ScalarProperty Name="BranchInventory_bi_id" ColumnName="BranchInventory_bi_id" />
+                <ScalarProperty Name="BranchInventory_Branch_branch_id" ColumnName="BranchInventory_Branch_branch_id" />
+                <ScalarProperty Name="BranchInventory_Goods_goods_id" ColumnName="BranchInventory_Goods_goods_id" />
+                <ScalarProperty Name="BranchInventory_Goods_Model_mod_id" ColumnName="BranchInventory_Goods_Model_mod_id" />
+                <ScalarProperty Name="BranchInventory_Goods_Model_Brand_brand_id" ColumnName="BranchInventory_Goods_Model_Brand_brand_id" />
+                <ScalarProperty Name="Sale_sale_id" ColumnName="Sale_sale_id" />
+                <ScalarProperty Name="Sale_Employee_emp_id" ColumnName="Sale_Employee_emp_id" />
+                <ScalarProperty Name="Sale_Employee_Branch_branch_id" ColumnName="Sale_Employee_Branch_branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shippings">
+            <EntityTypeMapping TypeName="smarttime_storeModel.shipping">
+              <MappingFragment StoreEntitySet="shipping">
+                <ScalarProperty Name="ship_id" ColumnName="ship_id" />
+                <ScalarProperty Name="ship_date" ColumnName="ship_date" />
+                <ScalarProperty Name="Employee_emp_id" ColumnName="Employee_emp_id" />
+                <ScalarProperty Name="Employee_Branch_branch_id" ColumnName="Employee_Branch_branch_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="shippingdetails">
+            <EntityTypeMapping TypeName="smarttime_storeModel.shippingdetail">
+              <MappingFragment StoreEntitySet="shippingdetail">
+                <ScalarProperty Name="sd_id" ColumnName="sd_id" />
+                <ScalarProperty Name="sd_goods_amount" ColumnName="sd_goods_amount" />
+                <ScalarProperty Name="Shipping_ship_id" ColumnName="Shipping_ship_id" />
+                <ScalarProperty Name="Shipping_Employee_emp_id" ColumnName="Shipping_Employee_emp_id" />
+                <ScalarProperty Name="Shipping_Employee_Branch_branch_id" ColumnName="Shipping_Employee_Branch_branch_id" />
+                <ScalarProperty Name="Goods_goods_id" ColumnName="Goods_goods_id" />
+                <ScalarProperty Name="Goods_Model_mod_id" ColumnName="Goods_Model_mod_id" />
+                <ScalarProperty Name="Goods_Model_Brand_brand_id" ColumnName="Goods_Model_Brand_brand_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

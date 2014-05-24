@@ -33,6 +33,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.3.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\MetroFramework.dll</HintPath>
@@ -49,6 +57,8 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -59,12 +69,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="branch.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="branchinventory.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="brand.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="cls.cs" />
     <Compile Include="dlgLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="dlgLogin.Designer.cs">
       <DependentUpon>dlgLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -78,8 +100,41 @@
     <Compile Include="frmSale.Designer.cs">
       <DependentUpon>frmSale.cs</DependentUpon>
     </Compile>
+    <Compile Include="good.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="model.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sale.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="saledetail.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shipping.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="shippingdetail.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmartTimeModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartTimeModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmartTimeModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SmartTimeModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SmartTimeModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="dlgLogin.resx">
       <DependentUpon>dlgLogin.cs</DependentUpon>
@@ -95,6 +150,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +165,23 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="SmartTimeModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SmartTimeModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SmartTimeModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmartTimeModel.edmx</DependentUpon>
+      <LastGenOutput>SmartTimeModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="SmartTimeModel.edmx.diagram">
+      <DependentUpon>SmartTimeModel.edmx</DependentUpon>
+    </None>
+    <None Include="SmartTimeModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SmartTimeModel.edmx</DependentUpon>
+      <LastGenOutput>SmartTimeModel.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config">
@@ -120,6 +193,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
