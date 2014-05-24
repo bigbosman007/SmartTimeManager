@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-
 namespace STmanager
 {
     public partial class frmMain : MetroForm
@@ -20,24 +19,13 @@ namespace STmanager
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            Utility.MaximizeForm(this);
+            dlgLogin dlgLogin = new dlgLogin();
+            DialogResult LoginResult = dlgLogin.ShowDialog();
 
-        }
-
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
-        private void frmMain_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
+            if (LoginResult == DialogResult.OK)
             {
-                if (txtLogin.Text == "134679")
-                {
-                    MessageBox.Show("เข้าสู่ระบบ");
-                }
-                else {  }
-            
+                metroLabel1.Text = "Login State : Logged";
             }
         }
     }

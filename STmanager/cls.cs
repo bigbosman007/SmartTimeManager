@@ -8,7 +8,7 @@ namespace STmanager
 {
     class cls
     {
-        frmMain  fmain = new frmMain();
+        dlgLogin  fmain = new dlgLogin();
         frmSale fsale = new frmSale ();
     }
 }
