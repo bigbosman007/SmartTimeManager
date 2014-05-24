@@ -13,10 +13,10 @@ namespace STmanager
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class smarttime_storeEntities : DbContext
+    public partial class SmartTimeModel : DbContext
     {
-        public smarttime_storeEntities()
-            : base("name=smarttime_storeEntities")
+        public SmartTimeModel()
+            : base("name=SmartTimeModel")
         {
         }
     
