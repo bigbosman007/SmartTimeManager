@@ -30,15 +30,19 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1360, 768);
+            this.BackImagePadding = new System.Windows.Forms.Padding(15, 5, 5, 5);
+            this.BackMaxSize = 100;
+            this.ClientSize = new System.Drawing.Size(1292, 768);
             this.ControlBox = false;
-            this.Name = "Form1";
-            this.Text = "Login(เข้าสู่ระบบ)";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Movable = false;
+            this.Name = "frmMain";
+            this.Resizable = false;
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.TopMost = true;
             this.ResumeLayout(false);
 
         }
