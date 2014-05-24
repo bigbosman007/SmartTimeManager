@@ -16,7 +16,6 @@ namespace STmanager
         public frmMain()
         {
             InitializeComponent();
-<<<<<<< HEAD
         }
 
         private void frmMain_Load(object sender, EventArgs e)
@@ -39,11 +38,7 @@ namespace STmanager
                 }
                 else {  }
             
-            
-            
             }
-=======
->>>>>>> 6b64ca8f4d3f8b398b735a7f3a073f6c0a13b722
         }
     }
 }
