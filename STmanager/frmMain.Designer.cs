@@ -47,6 +47,8 @@
             this.txtLogin.PasswordChar = '*';
             this.txtLogin.Size = new System.Drawing.Size(382, 47);
             this.txtLogin.TabIndex = 1;
+            this.txtLogin.TextChanged += new System.EventHandler(this.txtLogin_TextChanged);
+            this.txtLogin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtLogin_KeyDown);
             // 
             // label1
             // 
