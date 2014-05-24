@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="23d87bd435d24e2ab68653bca54da527" Name="Diagram1">
-        <EntityTypeShape EntityType="smarttime_storeModel.branch" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.branchinventory" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.brand" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.employee" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.good" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.model" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.sale" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.saledetail" Width="1.5" PointX="12.75" PointY="4.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.shipping" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="smarttime_storeModel.shippingdetail" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Branch" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.BranchInventory" Width="1.5" PointX="7.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Brand" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Employee" Width="1.5" PointX="8.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Good" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Model" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Sale" Width="1.5" PointX="10.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.SaleDetail" Width="1.5" PointX="12.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.Shipping" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="smarttime_storeModel.ShippingDetail" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
         <AssociationConnector Association="smarttime_storeModel.fk_BranchInventory_Branch1" ManuallyRouted="false" />
         <AssociationConnector Association="smarttime_storeModel.fk_Employee_Branch1" ManuallyRouted="false" />
         <AssociationConnector Association="smarttime_storeModel.fk_BranchInventory_Goods1" ManuallyRouted="false" />

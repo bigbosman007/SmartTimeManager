@@ -356,7 +356,7 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="smarttime_storeModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityType Name="branch">
+        <EntityType Name="Branch">
           <Key>
             <PropertyRef Name="branch_id" />
           </Key>
@@ -367,7 +367,7 @@
           <NavigationProperty Name="branchinventories" Relationship="Self.fk_BranchInventory_Branch1" FromRole="branch" ToRole="branchinventory" />
           <NavigationProperty Name="employees" Relationship="Self.fk_Employee_Branch1" FromRole="branch" ToRole="employee" />
         </EntityType>
-        <EntityType Name="branchinventory">
+        <EntityType Name="BranchInventory">
           <Key>
             <PropertyRef Name="bi_id" />
             <PropertyRef Name="Branch_branch_id" />
@@ -385,7 +385,7 @@
           <NavigationProperty Name="good" Relationship="Self.fk_BranchInventory_Goods1" FromRole="branchinventory" ToRole="goods" />
           <NavigationProperty Name="saledetails" Relationship="Self.fk_SaleDetail_BranchInventory1" FromRole="branchinventory" ToRole="saledetail" />
         </EntityType>
-        <EntityType Name="brand">
+        <EntityType Name="Brand">
           <Key>
             <PropertyRef Name="brand_id" />
           </Key>
@@ -393,7 +393,7 @@
           <Property Name="brand_name" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="models" Relationship="Self.fk_Gen_Brand" FromRole="brand" ToRole="model" />
         </EntityType>
-        <EntityType Name="employee">
+        <EntityType Name="Employee">
           <Key>
             <PropertyRef Name="emp_id" />
             <PropertyRef Name="Branch_branch_id" />
@@ -407,7 +407,7 @@
           <NavigationProperty Name="sales" Relationship="Self.fk_Sale_Employee1" FromRole="employee" ToRole="sale" />
           <NavigationProperty Name="shippings" Relationship="Self.fk_Shipping_Employee1" FromRole="employee" ToRole="shipping" />
         </EntityType>
-        <EntityType Name="good">
+        <EntityType Name="Good">
           <Key>
             <PropertyRef Name="goods_id" />
             <PropertyRef Name="Model_mod_id" />
@@ -423,7 +423,7 @@
           <NavigationProperty Name="model" Relationship="Self.fk_Goods_Model1" FromRole="goods" ToRole="model" />
           <NavigationProperty Name="shippingdetails" Relationship="Self.fk_ShippingDetail_Goods1" FromRole="goods" ToRole="shippingdetail" />
         </EntityType>
-        <EntityType Name="model">
+        <EntityType Name="Model">
           <Key>
             <PropertyRef Name="mod_id" />
             <PropertyRef Name="Brand_brand_id" />
@@ -434,7 +434,7 @@
           <NavigationProperty Name="brand" Relationship="Self.fk_Gen_Brand" FromRole="model" ToRole="brand" />
           <NavigationProperty Name="goods" Relationship="Self.fk_Goods_Model1" FromRole="model" ToRole="goods" />
         </EntityType>
-        <EntityType Name="sale">
+        <EntityType Name="Sale">
           <Key>
             <PropertyRef Name="sale_id" />
             <PropertyRef Name="Employee_emp_id" />
@@ -448,7 +448,7 @@
           <NavigationProperty Name="employee" Relationship="Self.fk_Sale_Employee1" FromRole="sale" ToRole="employee" />
           <NavigationProperty Name="saledetails" Relationship="Self.fk_SaleDetail_Sale1" FromRole="sale" ToRole="saledetail" />
         </EntityType>
-        <EntityType Name="saledetail">
+        <EntityType Name="SaleDetail">
           <Key>
             <PropertyRef Name="sd_id" />
             <PropertyRef Name="BranchInventory_bi_id" />
@@ -473,7 +473,7 @@
           <NavigationProperty Name="branchinventory" Relationship="Self.fk_SaleDetail_BranchInventory1" FromRole="saledetail" ToRole="branchinventory" />
           <NavigationProperty Name="sale" Relationship="Self.fk_SaleDetail_Sale1" FromRole="saledetail" ToRole="sale" />
         </EntityType>
-        <EntityType Name="shipping">
+        <EntityType Name="Shipping">
           <Key>
             <PropertyRef Name="ship_id" />
             <PropertyRef Name="Employee_emp_id" />
@@ -486,7 +486,7 @@
           <NavigationProperty Name="employee" Relationship="Self.fk_Shipping_Employee1" FromRole="shipping" ToRole="employee" />
           <NavigationProperty Name="shippingdetails" Relationship="Self.fk_ShippingDetail_Shipping1" FromRole="shipping" ToRole="shippingdetail" />
         </EntityType>
-        <EntityType Name="shippingdetail">
+        <EntityType Name="ShippingDetail">
           <Key>
             <PropertyRef Name="sd_id" />
             <PropertyRef Name="Shipping_ship_id" />
@@ -508,8 +508,8 @@
           <NavigationProperty Name="shipping" Relationship="Self.fk_ShippingDetail_Shipping1" FromRole="shippingdetail" ToRole="shipping" />
         </EntityType>
         <Association Name="fk_BranchInventory_Branch1">
-          <End Role="branch" Type="Self.branch" Multiplicity="1" />
-          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <End Role="branch" Type="smarttime_storeModel.Branch" Multiplicity="1" />
+          <End Role="branchinventory" Type="smarttime_storeModel.BranchInventory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="branch">
               <PropertyRef Name="branch_id" />
@@ -520,8 +520,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Employee_Branch1">
-          <End Role="branch" Type="Self.branch" Multiplicity="1" />
-          <End Role="employee" Type="Self.employee" Multiplicity="*" />
+          <End Role="branch" Type="smarttime_storeModel.Branch" Multiplicity="1" />
+          <End Role="employee" Type="smarttime_storeModel.Employee" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="branch">
               <PropertyRef Name="branch_id" />
@@ -532,8 +532,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_BranchInventory_Goods1">
-          <End Role="goods" Type="Self.good" Multiplicity="1" />
-          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="*" />
+          <End Role="goods" Type="smarttime_storeModel.Good" Multiplicity="1" />
+          <End Role="branchinventory" Type="smarttime_storeModel.BranchInventory" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="goods">
               <PropertyRef Name="goods_id" />
@@ -548,8 +548,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_SaleDetail_BranchInventory1">
-          <End Role="branchinventory" Type="Self.branchinventory" Multiplicity="1" />
-          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <End Role="branchinventory" Type="smarttime_storeModel.BranchInventory" Multiplicity="1" />
+          <End Role="saledetail" Type="smarttime_storeModel.SaleDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="branchinventory">
               <PropertyRef Name="bi_id" />
@@ -568,8 +568,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Gen_Brand">
-          <End Role="brand" Type="Self.brand" Multiplicity="1" />
-          <End Role="model" Type="Self.model" Multiplicity="*" />
+          <End Role="brand" Type="smarttime_storeModel.Brand" Multiplicity="1" />
+          <End Role="model" Type="smarttime_storeModel.Model" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="brand">
               <PropertyRef Name="brand_id" />
@@ -580,8 +580,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Sale_Employee1">
-          <End Role="employee" Type="Self.employee" Multiplicity="1" />
-          <End Role="sale" Type="Self.sale" Multiplicity="*" />
+          <End Role="employee" Type="smarttime_storeModel.Employee" Multiplicity="1" />
+          <End Role="sale" Type="smarttime_storeModel.Sale" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="employee">
               <PropertyRef Name="emp_id" />
@@ -594,8 +594,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Shipping_Employee1">
-          <End Role="employee" Type="Self.employee" Multiplicity="1" />
-          <End Role="shipping" Type="Self.shipping" Multiplicity="*" />
+          <End Role="employee" Type="smarttime_storeModel.Employee" Multiplicity="1" />
+          <End Role="shipping" Type="smarttime_storeModel.Shipping" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="employee">
               <PropertyRef Name="emp_id" />
@@ -608,8 +608,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_Goods_Model1">
-          <End Role="model" Type="Self.model" Multiplicity="1" />
-          <End Role="goods" Type="Self.good" Multiplicity="*" />
+          <End Role="model" Type="smarttime_storeModel.Model" Multiplicity="1" />
+          <End Role="goods" Type="smarttime_storeModel.Good" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="model">
               <PropertyRef Name="mod_id" />
@@ -622,8 +622,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_ShippingDetail_Goods1">
-          <End Role="goods" Type="Self.good" Multiplicity="1" />
-          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <End Role="goods" Type="smarttime_storeModel.Good" Multiplicity="1" />
+          <End Role="shippingdetail" Type="smarttime_storeModel.ShippingDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="goods">
               <PropertyRef Name="goods_id" />
@@ -638,8 +638,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_SaleDetail_Sale1">
-          <End Role="sale" Type="Self.sale" Multiplicity="1" />
-          <End Role="saledetail" Type="Self.saledetail" Multiplicity="*" />
+          <End Role="sale" Type="smarttime_storeModel.Sale" Multiplicity="1" />
+          <End Role="saledetail" Type="smarttime_storeModel.SaleDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="sale">
               <PropertyRef Name="sale_id" />
@@ -654,8 +654,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="fk_ShippingDetail_Shipping1">
-          <End Role="shipping" Type="Self.shipping" Multiplicity="1" />
-          <End Role="shippingdetail" Type="Self.shippingdetail" Multiplicity="*" />
+          <End Role="shipping" Type="smarttime_storeModel.Shipping" Multiplicity="1" />
+          <End Role="shippingdetail" Type="smarttime_storeModel.ShippingDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="shipping">
               <PropertyRef Name="ship_id" />
@@ -670,59 +670,59 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="smarttime_storeEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="branches" EntityType="Self.branch" />
-          <EntitySet Name="branchinventories" EntityType="Self.branchinventory" />
-          <EntitySet Name="brands" EntityType="Self.brand" />
-          <EntitySet Name="employees" EntityType="Self.employee" />
-          <EntitySet Name="goods" EntityType="Self.good" />
-          <EntitySet Name="models" EntityType="Self.model" />
-          <EntitySet Name="sales" EntityType="Self.sale" />
-          <EntitySet Name="saledetails" EntityType="Self.saledetail" />
-          <EntitySet Name="shippings" EntityType="Self.shipping" />
-          <EntitySet Name="shippingdetails" EntityType="Self.shippingdetail" />
+          <EntitySet Name="Branches" EntityType="smarttime_storeModel.Branch" />
+          <EntitySet Name="BranchInventories" EntityType="smarttime_storeModel.BranchInventory" />
+          <EntitySet Name="Brands" EntityType="smarttime_storeModel.Brand" />
+          <EntitySet Name="Employees" EntityType="smarttime_storeModel.Employee" />
+          <EntitySet Name="Goods" EntityType="smarttime_storeModel.Good" />
+          <EntitySet Name="Models" EntityType="smarttime_storeModel.Model" />
+          <EntitySet Name="Sales" EntityType="smarttime_storeModel.Sale" />
+          <EntitySet Name="SaleDetails" EntityType="smarttime_storeModel.SaleDetail" />
+          <EntitySet Name="Shippings" EntityType="smarttime_storeModel.Shipping" />
+          <EntitySet Name="ShippingDetails" EntityType="smarttime_storeModel.ShippingDetail" />
           <AssociationSet Name="fk_BranchInventory_Branch1" Association="Self.fk_BranchInventory_Branch1">
-            <End Role="branch" EntitySet="branches" />
-            <End Role="branchinventory" EntitySet="branchinventories" />
+            <End Role="branch" EntitySet="Branches" />
+            <End Role="branchinventory" EntitySet="BranchInventories" />
           </AssociationSet>
           <AssociationSet Name="fk_Employee_Branch1" Association="Self.fk_Employee_Branch1">
-            <End Role="branch" EntitySet="branches" />
-            <End Role="employee" EntitySet="employees" />
+            <End Role="branch" EntitySet="Branches" />
+            <End Role="employee" EntitySet="Employees" />
           </AssociationSet>
           <AssociationSet Name="fk_BranchInventory_Goods1" Association="Self.fk_BranchInventory_Goods1">
-            <End Role="goods" EntitySet="goods" />
-            <End Role="branchinventory" EntitySet="branchinventories" />
+            <End Role="goods" EntitySet="Goods" />
+            <End Role="branchinventory" EntitySet="BranchInventories" />
           </AssociationSet>
           <AssociationSet Name="fk_SaleDetail_BranchInventory1" Association="Self.fk_SaleDetail_BranchInventory1">
-            <End Role="branchinventory" EntitySet="branchinventories" />
-            <End Role="saledetail" EntitySet="saledetails" />
+            <End Role="branchinventory" EntitySet="BranchInventories" />
+            <End Role="saledetail" EntitySet="SaleDetails" />
           </AssociationSet>
           <AssociationSet Name="fk_Gen_Brand" Association="Self.fk_Gen_Brand">
-            <End Role="brand" EntitySet="brands" />
-            <End Role="model" EntitySet="models" />
+            <End Role="brand" EntitySet="Brands" />
+            <End Role="model" EntitySet="Models" />
           </AssociationSet>
           <AssociationSet Name="fk_Sale_Employee1" Association="Self.fk_Sale_Employee1">
-            <End Role="employee" EntitySet="employees" />
-            <End Role="sale" EntitySet="sales" />
+            <End Role="employee" EntitySet="Employees" />
+            <End Role="sale" EntitySet="Sales" />
           </AssociationSet>
           <AssociationSet Name="fk_Shipping_Employee1" Association="Self.fk_Shipping_Employee1">
-            <End Role="employee" EntitySet="employees" />
-            <End Role="shipping" EntitySet="shippings" />
+            <End Role="employee" EntitySet="Employees" />
+            <End Role="shipping" EntitySet="Shippings" />
           </AssociationSet>
           <AssociationSet Name="fk_Goods_Model1" Association="Self.fk_Goods_Model1">
-            <End Role="model" EntitySet="models" />
-            <End Role="goods" EntitySet="goods" />
+            <End Role="model" EntitySet="Models" />
+            <End Role="goods" EntitySet="Goods" />
           </AssociationSet>
           <AssociationSet Name="fk_ShippingDetail_Goods1" Association="Self.fk_ShippingDetail_Goods1">
-            <End Role="goods" EntitySet="goods" />
-            <End Role="shippingdetail" EntitySet="shippingdetails" />
+            <End Role="goods" EntitySet="Goods" />
+            <End Role="shippingdetail" EntitySet="ShippingDetails" />
           </AssociationSet>
           <AssociationSet Name="fk_SaleDetail_Sale1" Association="Self.fk_SaleDetail_Sale1">
-            <End Role="sale" EntitySet="sales" />
-            <End Role="saledetail" EntitySet="saledetails" />
+            <End Role="sale" EntitySet="Sales" />
+            <End Role="saledetail" EntitySet="SaleDetails" />
           </AssociationSet>
           <AssociationSet Name="fk_ShippingDetail_Shipping1" Association="Self.fk_ShippingDetail_Shipping1">
-            <End Role="shipping" EntitySet="shippings" />
-            <End Role="shippingdetail" EntitySet="shippingdetails" />
+            <End Role="shipping" EntitySet="Shippings" />
+            <End Role="shippingdetail" EntitySet="ShippingDetails" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
@@ -731,8 +731,8 @@
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="smarttime_storeModelStoreContainer" CdmEntityContainer="smarttime_storeEntities">
-          <EntitySetMapping Name="branches">
-            <EntityTypeMapping TypeName="smarttime_storeModel.branch">
+          <EntitySetMapping Name="Branches">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Branch">
               <MappingFragment StoreEntitySet="branch">
                 <ScalarProperty Name="branch_id" ColumnName="branch_id" />
                 <ScalarProperty Name="branch_name" ColumnName="branch_name" />
@@ -741,8 +741,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="branchinventories">
-            <EntityTypeMapping TypeName="smarttime_storeModel.branchinventory">
+          <EntitySetMapping Name="BranchInventories">
+            <EntityTypeMapping TypeName="smarttime_storeModel.BranchInventory">
               <MappingFragment StoreEntitySet="branchinventory">
                 <ScalarProperty Name="bi_id" ColumnName="bi_id" />
                 <ScalarProperty Name="bi_goods_amount" ColumnName="bi_goods_amount" />
@@ -753,16 +753,16 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="brands">
-            <EntityTypeMapping TypeName="smarttime_storeModel.brand">
+          <EntitySetMapping Name="Brands">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Brand">
               <MappingFragment StoreEntitySet="brand">
                 <ScalarProperty Name="brand_id" ColumnName="brand_id" />
                 <ScalarProperty Name="brand_name" ColumnName="brand_name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="employees">
-            <EntityTypeMapping TypeName="smarttime_storeModel.employee">
+          <EntitySetMapping Name="Employees">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Employee">
               <MappingFragment StoreEntitySet="employee">
                 <ScalarProperty Name="emp_id" ColumnName="emp_id" />
                 <ScalarProperty Name="emp_name" ColumnName="emp_name" />
@@ -772,8 +772,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="goods">
-            <EntityTypeMapping TypeName="smarttime_storeModel.good">
+          <EntitySetMapping Name="Goods">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Good">
               <MappingFragment StoreEntitySet="goods">
                 <ScalarProperty Name="goods_id" ColumnName="goods_id" />
                 <ScalarProperty Name="goods_name" ColumnName="goods_name" />
@@ -784,8 +784,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="models">
-            <EntityTypeMapping TypeName="smarttime_storeModel.model">
+          <EntitySetMapping Name="Models">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Model">
               <MappingFragment StoreEntitySet="model">
                 <ScalarProperty Name="mod_id" ColumnName="mod_id" />
                 <ScalarProperty Name="mod_name" ColumnName="mod_name" />
@@ -793,8 +793,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="sales">
-            <EntityTypeMapping TypeName="smarttime_storeModel.sale">
+          <EntitySetMapping Name="Sales">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Sale">
               <MappingFragment StoreEntitySet="sale">
                 <ScalarProperty Name="sale_id" ColumnName="sale_id" />
                 <ScalarProperty Name="sale_date" ColumnName="sale_date" />
@@ -804,8 +804,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="saledetails">
-            <EntityTypeMapping TypeName="smarttime_storeModel.saledetail">
+          <EntitySetMapping Name="SaleDetails">
+            <EntityTypeMapping TypeName="smarttime_storeModel.SaleDetail">
               <MappingFragment StoreEntitySet="saledetail">
                 <ScalarProperty Name="sd_id" ColumnName="sd_id" />
                 <ScalarProperty Name="sd_goods_amount" ColumnName="sd_goods_amount" />
@@ -820,8 +820,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="shippings">
-            <EntityTypeMapping TypeName="smarttime_storeModel.shipping">
+          <EntitySetMapping Name="Shippings">
+            <EntityTypeMapping TypeName="smarttime_storeModel.Shipping">
               <MappingFragment StoreEntitySet="shipping">
                 <ScalarProperty Name="ship_id" ColumnName="ship_id" />
                 <ScalarProperty Name="ship_date" ColumnName="ship_date" />
@@ -830,8 +830,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="shippingdetails">
-            <EntityTypeMapping TypeName="smarttime_storeModel.shippingdetail">
+          <EntitySetMapping Name="ShippingDetails">
+            <EntityTypeMapping TypeName="smarttime_storeModel.ShippingDetail">
               <MappingFragment StoreEntitySet="shippingdetail">
                 <ScalarProperty Name="sd_id" ColumnName="sd_id" />
                 <ScalarProperty Name="sd_goods_amount" ColumnName="sd_goods_amount" />

@@ -12,12 +12,12 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class branch
+    public partial class Branch
     {
-        public branch()
+        public Branch()
         {
-            this.branchinventories = new HashSet<branchinventory>();
-            this.employees = new HashSet<employee>();
+            this.branchinventories = new HashSet<BranchInventory>();
+            this.employees = new HashSet<Employee>();
         }
     
         public int branch_id { get; set; }
@@ -25,7 +25,7 @@ namespace STmanager
         public string branch_tel { get; set; }
         public string branch_add { get; set; }
     
-        public virtual ICollection<branchinventory> branchinventories { get; set; }
-        public virtual ICollection<employee> employees { get; set; }
+        public virtual ICollection<BranchInventory> branchinventories { get; set; }
+        public virtual ICollection<Employee> employees { get; set; }
     }
 }

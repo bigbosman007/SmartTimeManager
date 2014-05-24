@@ -12,16 +12,16 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class brand
+    public partial class Brand
     {
-        public brand()
+        public Brand()
         {
-            this.models = new HashSet<model>();
+            this.models = new HashSet<Model>();
         }
     
         public int brand_id { get; set; }
         public string brand_name { get; set; }
     
-        public virtual ICollection<model> models { get; set; }
+        public virtual ICollection<Model> models { get; set; }
     }
 }

@@ -12,18 +12,18 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class model
+    public partial class Model
     {
-        public model()
+        public Model()
         {
-            this.goods = new HashSet<good>();
+            this.goods = new HashSet<Good>();
         }
     
         public int mod_id { get; set; }
         public string mod_name { get; set; }
         public int Brand_brand_id { get; set; }
     
-        public virtual brand brand { get; set; }
-        public virtual ICollection<good> goods { get; set; }
+        public virtual Brand brand { get; set; }
+        public virtual ICollection<Good> goods { get; set; }
     }
 }

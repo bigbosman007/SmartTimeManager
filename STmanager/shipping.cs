@@ -12,11 +12,11 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class shipping
+    public partial class Shipping
     {
-        public shipping()
+        public Shipping()
         {
-            this.shippingdetails = new HashSet<shippingdetail>();
+            this.shippingdetails = new HashSet<ShippingDetail>();
         }
     
         public int ship_id { get; set; }
@@ -24,7 +24,7 @@ namespace STmanager
         public string Employee_emp_id { get; set; }
         public int Employee_Branch_branch_id { get; set; }
     
-        public virtual employee employee { get; set; }
-        public virtual ICollection<shippingdetail> shippingdetails { get; set; }
+        public virtual Employee employee { get; set; }
+        public virtual ICollection<ShippingDetail> shippingdetails { get; set; }
     }
 }

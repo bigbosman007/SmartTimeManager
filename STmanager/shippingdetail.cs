@@ -12,7 +12,7 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class shippingdetail
+    public partial class ShippingDetail
     {
         public int sd_id { get; set; }
         public Nullable<int> sd_goods_amount { get; set; }
@@ -23,7 +23,7 @@ namespace STmanager
         public int Goods_Model_mod_id { get; set; }
         public int Goods_Model_Brand_brand_id { get; set; }
     
-        public virtual good good { get; set; }
-        public virtual shipping shipping { get; set; }
+        public virtual Good good { get; set; }
+        public virtual Shipping shipping { get; set; }
     }
 }

@@ -25,15 +25,15 @@ namespace STmanager
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<branch> branches { get; set; }
-        public virtual DbSet<branchinventory> branchinventories { get; set; }
-        public virtual DbSet<brand> brands { get; set; }
-        public virtual DbSet<employee> employees { get; set; }
-        public virtual DbSet<good> goods { get; set; }
-        public virtual DbSet<model> models { get; set; }
-        public virtual DbSet<sale> sales { get; set; }
-        public virtual DbSet<saledetail> saledetails { get; set; }
-        public virtual DbSet<shipping> shippings { get; set; }
-        public virtual DbSet<shippingdetail> shippingdetails { get; set; }
+        public virtual DbSet<Branch> Branches { get; set; }
+        public virtual DbSet<BranchInventory> BranchInventories { get; set; }
+        public virtual DbSet<Brand> Brands { get; set; }
+        public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<Good> Goods { get; set; }
+        public virtual DbSet<Model> Models { get; set; }
+        public virtual DbSet<Sale> Sales { get; set; }
+        public virtual DbSet<SaleDetail> SaleDetails { get; set; }
+        public virtual DbSet<Shipping> Shippings { get; set; }
+        public virtual DbSet<ShippingDetail> ShippingDetails { get; set; }
     }
 }

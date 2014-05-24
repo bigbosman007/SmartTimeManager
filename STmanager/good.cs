@@ -12,12 +12,12 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class good
+    public partial class Good
     {
-        public good()
+        public Good()
         {
-            this.branchinventories = new HashSet<branchinventory>();
-            this.shippingdetails = new HashSet<shippingdetail>();
+            this.branchinventories = new HashSet<BranchInventory>();
+            this.shippingdetails = new HashSet<ShippingDetail>();
         }
     
         public int goods_id { get; set; }
@@ -27,8 +27,8 @@ namespace STmanager
         public int Model_Brand_brand_id { get; set; }
         public string goods_img { get; set; }
     
-        public virtual ICollection<branchinventory> branchinventories { get; set; }
-        public virtual model model { get; set; }
-        public virtual ICollection<shippingdetail> shippingdetails { get; set; }
+        public virtual ICollection<BranchInventory> branchinventories { get; set; }
+        public virtual Model model { get; set; }
+        public virtual ICollection<ShippingDetail> shippingdetails { get; set; }
     }
 }

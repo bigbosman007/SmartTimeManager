@@ -12,11 +12,11 @@ namespace STmanager
     using System;
     using System.Collections.Generic;
     
-    public partial class sale
+    public partial class Sale
     {
-        public sale()
+        public Sale()
         {
-            this.saledetails = new HashSet<saledetail>();
+            this.saledetails = new HashSet<SaleDetail>();
         }
     
         public string sale_id { get; set; }
@@ -25,7 +25,7 @@ namespace STmanager
         public string Employee_emp_id { get; set; }
         public int Employee_Branch_branch_id { get; set; }
     
-        public virtual employee employee { get; set; }
-        public virtual ICollection<saledetail> saledetails { get; set; }
+        public virtual Employee employee { get; set; }
+        public virtual ICollection<SaleDetail> saledetails { get; set; }
     }
 }
