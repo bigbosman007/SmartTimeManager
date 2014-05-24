@@ -18,7 +18,6 @@ namespace STmanager
             InitializeComponent();
         }
 
-
         private void txtBarcode_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
