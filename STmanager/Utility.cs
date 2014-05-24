@@ -98,7 +98,7 @@ namespace STmanager
         
         }
 
-        public static void addemp()
+        public static void TestAddEmployee()
         {
             using (SmartTimeModel DbContext = new SmartTimeModel())
             {
