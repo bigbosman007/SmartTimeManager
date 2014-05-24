@@ -22,7 +22,7 @@ namespace STmanager
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (Utility.TestLogin(txtBarcode.Text))
+                if (Utility.TestLogin(txtBarcode.Text)) 
                 {
                     this.DialogResult = DialogResult.OK;
                 }

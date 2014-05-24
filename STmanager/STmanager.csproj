@@ -190,10 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MetroFramework.dll" />
+    <None Include="Resources\Untitled-1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
