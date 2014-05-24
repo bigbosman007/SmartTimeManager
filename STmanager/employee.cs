@@ -16,6 +16,7 @@ namespace STmanager
     {
         public Employee()
         {
+            this.eventlogs = new HashSet<EventLog>();
             this.sales = new HashSet<Sale>();
             this.shippings = new HashSet<Shipping>();
         }
@@ -27,6 +28,7 @@ namespace STmanager
         public int Branch_branch_id { get; set; }
     
         public virtual Branch branch { get; set; }
+        public virtual ICollection<EventLog> eventlogs { get; set; }
         public virtual ICollection<Sale> sales { get; set; }
         public virtual ICollection<Shipping> shippings { get; set; }
     }

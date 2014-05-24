@@ -29,6 +29,7 @@ namespace STmanager
         public virtual DbSet<BranchInventory> BranchInventories { get; set; }
         public virtual DbSet<Brand> Brands { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
+        public virtual DbSet<EventLog> EventLogs { get; set; }
         public virtual DbSet<Good> Goods { get; set; }
         public virtual DbSet<Model> Models { get; set; }
         public virtual DbSet<Sale> Sales { get; set; }
