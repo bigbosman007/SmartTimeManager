@@ -63,9 +63,15 @@ namespace STmanager.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap Jtacs_logo {
             get {
                 object obj = ResourceManager.GetObject("Jtacs logo", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap Untitled_1 {
+            get {
+                object obj = ResourceManager.GetObject("Untitled-1", resourceCulture);
+>>>>>>> 5a15c8a46ace51a3f954aab7a9f27e2e6784e01c
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
