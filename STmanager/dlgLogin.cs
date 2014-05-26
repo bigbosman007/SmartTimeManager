@@ -33,5 +33,15 @@ namespace STmanager
                 }
             }
         }
+
+        private void dlgLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBarcode_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

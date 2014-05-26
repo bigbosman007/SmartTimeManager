@@ -57,9 +57,10 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(23, 60);
+            this.metroLabel1.Location = new System.Drawing.Point(31, 74);
+            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(117, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(123, 20);
             this.metroLabel1.TabIndex = 0;
             this.metroLabel1.Text = "Login State : None";
             this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -68,18 +69,20 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label1.Location = new System.Drawing.Point(23, 179);
+            this.label1.Location = new System.Drawing.Point(31, 220);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 23);
+            this.label1.Size = new System.Drawing.Size(159, 29);
             this.label1.TabIndex = 1;
             this.label1.Text = "รหัสสินค้า    ::";
             // 
             // metroButton1
             // 
             this.metroButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.metroButton1.Location = new System.Drawing.Point(23, 86);
+            this.metroButton1.Location = new System.Drawing.Point(31, 106);
+            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(165, 68);
+            this.metroButton1.Size = new System.Drawing.Size(220, 84);
             this.metroButton1.TabIndex = 3;
             this.metroButton1.Text = "จัดการสินค้า";
             this.metroButton1.UseSelectable = true;
@@ -87,9 +90,10 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(194, 86);
+            this.metroButton2.Location = new System.Drawing.Point(259, 106);
+            this.metroButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(165, 68);
+            this.metroButton2.Size = new System.Drawing.Size(220, 84);
             this.metroButton2.TabIndex = 4;
             this.metroButton2.Text = "metroButton2";
             this.metroButton2.UseSelectable = true;
@@ -97,9 +101,10 @@
             // 
             // metroButton3
             // 
-            this.metroButton3.Location = new System.Drawing.Point(365, 86);
+            this.metroButton3.Location = new System.Drawing.Point(487, 106);
+            this.metroButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(165, 68);
+            this.metroButton3.Size = new System.Drawing.Size(220, 84);
             this.metroButton3.TabIndex = 5;
             this.metroButton3.Text = "metroButton3";
             this.metroButton3.UseSelectable = true;
@@ -107,9 +112,10 @@
             // 
             // metroButton4
             // 
-            this.metroButton4.Location = new System.Drawing.Point(536, 86);
+            this.metroButton4.Location = new System.Drawing.Point(715, 106);
+            this.metroButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(165, 68);
+            this.metroButton4.Size = new System.Drawing.Size(220, 84);
             this.metroButton4.TabIndex = 6;
             this.metroButton4.Text = "metroButton4";
             this.metroButton4.UseSelectable = true;
@@ -117,9 +123,10 @@
             // 
             // metroButton5
             // 
-            this.metroButton5.Location = new System.Drawing.Point(707, 86);
+            this.metroButton5.Location = new System.Drawing.Point(943, 106);
+            this.metroButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(165, 68);
+            this.metroButton5.Size = new System.Drawing.Size(220, 84);
             this.metroButton5.TabIndex = 7;
             this.metroButton5.Text = "metroButton5";
             this.metroButton5.UseSelectable = true;
@@ -129,9 +136,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(21, 265);
+            this.label2.Location = new System.Drawing.Point(28, 326);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(128, 23);
+            this.label2.Size = new System.Drawing.Size(160, 29);
             this.label2.TabIndex = 8;
             this.label2.Text = "รหัสรุ่นสินค้า ::";
             // 
@@ -139,9 +147,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label3.Location = new System.Drawing.Point(23, 297);
+            this.label3.Location = new System.Drawing.Point(31, 366);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(125, 23);
+            this.label3.Size = new System.Drawing.Size(161, 29);
             this.label3.TabIndex = 9;
             this.label3.Text = "ยี่ห้อ           ::";
             // 
@@ -149,9 +158,10 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(26, 331);
+            this.label4.Location = new System.Drawing.Point(35, 407);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(122, 23);
+            this.label4.Size = new System.Drawing.Size(158, 29);
             this.label4.TabIndex = 10;
             this.label4.Text = "รุ่น             ::";
             // 
@@ -159,61 +169,68 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(26, 366);
+            this.label5.Location = new System.Drawing.Point(35, 450);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(122, 23);
+            this.label5.Size = new System.Drawing.Size(158, 29);
             this.label5.TabIndex = 11;
             this.label5.Text = "ราคา          ::";
             // 
             // txtGoodsId
             // 
             this.txtGoodsId.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtGoodsId.Location = new System.Drawing.Point(156, 176);
+            this.txtGoodsId.Location = new System.Drawing.Point(208, 217);
+            this.txtGoodsId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGoodsId.Name = "txtGoodsId";
-            this.txtGoodsId.Size = new System.Drawing.Size(203, 30);
+            this.txtGoodsId.Size = new System.Drawing.Size(269, 36);
             this.txtGoodsId.TabIndex = 12;
             // 
             // txtGoodsName
             // 
             this.txtGoodsName.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtGoodsName.Location = new System.Drawing.Point(156, 262);
+            this.txtGoodsName.Location = new System.Drawing.Point(208, 322);
+            this.txtGoodsName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtGoodsName.Name = "txtGoodsName";
-            this.txtGoodsName.Size = new System.Drawing.Size(203, 30);
+            this.txtGoodsName.Size = new System.Drawing.Size(269, 36);
             this.txtGoodsName.TabIndex = 13;
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtPrice.Location = new System.Drawing.Point(156, 366);
+            this.txtPrice.Location = new System.Drawing.Point(208, 450);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(203, 30);
+            this.txtPrice.Size = new System.Drawing.Size(269, 36);
             this.txtPrice.TabIndex = 14;
             // 
             // cmbBrand
             // 
             this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.ItemHeight = 23;
-            this.cmbBrand.Location = new System.Drawing.Point(156, 297);
+            this.cmbBrand.ItemHeight = 24;
+            this.cmbBrand.Location = new System.Drawing.Point(208, 366);
+            this.cmbBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(203, 29);
+            this.cmbBrand.Size = new System.Drawing.Size(269, 30);
             this.cmbBrand.TabIndex = 15;
             this.cmbBrand.UseSelectable = true;
             // 
             // cmbModel
             // 
             this.cmbModel.FormattingEnabled = true;
-            this.cmbModel.ItemHeight = 23;
-            this.cmbModel.Location = new System.Drawing.Point(156, 331);
+            this.cmbModel.ItemHeight = 24;
+            this.cmbModel.Location = new System.Drawing.Point(208, 407);
+            this.cmbModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmbModel.Name = "cmbModel";
-            this.cmbModel.Size = new System.Drawing.Size(203, 29);
+            this.cmbModel.Size = new System.Drawing.Size(269, 30);
             this.cmbModel.TabIndex = 16;
             this.cmbModel.UseSelectable = true;
             // 
             // btnBrand
             // 
-            this.btnBrand.Location = new System.Drawing.Point(372, 301);
+            this.btnBrand.Location = new System.Drawing.Point(496, 370);
+            this.btnBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBrand.Name = "btnBrand";
-            this.btnBrand.Size = new System.Drawing.Size(84, 20);
+            this.btnBrand.Size = new System.Drawing.Size(112, 25);
             this.btnBrand.TabIndex = 17;
             this.btnBrand.Text = "เพิ่มเติม";
             this.btnBrand.UseSelectable = true;
@@ -221,9 +238,10 @@
             // 
             // btnModel
             // 
-            this.btnModel.Location = new System.Drawing.Point(372, 335);
+            this.btnModel.Location = new System.Drawing.Point(496, 412);
+            this.btnModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnModel.Name = "btnModel";
-            this.btnModel.Size = new System.Drawing.Size(84, 20);
+            this.btnModel.Size = new System.Drawing.Size(112, 25);
             this.btnModel.TabIndex = 18;
             this.btnModel.Text = "เพิ่มเติม";
             this.btnModel.UseSelectable = true;
@@ -233,9 +251,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("3 of 9 Barcode", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(147, 209);
+            this.label6.Location = new System.Drawing.Point(196, 257);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(295, 50);
+            this.label6.Size = new System.Drawing.Size(371, 64);
             this.label6.TabIndex = 19;
             this.label6.Text = "Barcode";
             // 
@@ -243,9 +262,10 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::STmanager.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(156, 460);
+            this.pictureBox1.Location = new System.Drawing.Point(208, 566);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(203, 204);
+            this.pictureBox1.Size = new System.Drawing.Size(270, 251);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
@@ -254,16 +274,18 @@
             // 
             this.textBox1.Enabled = false;
             this.textBox1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.textBox1.Location = new System.Drawing.Point(156, 424);
+            this.textBox1.Location = new System.Drawing.Point(208, 522);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(203, 30);
+            this.textBox1.Size = new System.Drawing.Size(269, 36);
             this.textBox1.TabIndex = 21;
             // 
             // btnImg
             // 
-            this.btnImg.Location = new System.Drawing.Point(372, 431);
+            this.btnImg.Location = new System.Drawing.Point(496, 530);
+            this.btnImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(84, 20);
+            this.btnImg.Size = new System.Drawing.Size(112, 25);
             this.btnImg.TabIndex = 22;
             this.btnImg.Text = "เลือก File";
             this.btnImg.UseSelectable = true;
@@ -274,17 +296,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label7.Location = new System.Drawing.Point(26, 427);
+            this.label7.Location = new System.Drawing.Point(35, 526);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(122, 23);
+            this.label7.Size = new System.Drawing.Size(156, 29);
             this.label7.TabIndex = 23;
             this.label7.Text = "เลือกภาพ    ::";
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1280, 768);
+            this.ClientSize = new System.Drawing.Size(1692, 945);
             this.ControlBox = false;
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnImg);
@@ -309,7 +332,10 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.metroLabel1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Movable = false;
             this.Name = "frmMain";
+            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Goods Manager Client";
