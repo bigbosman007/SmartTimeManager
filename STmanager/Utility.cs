@@ -9,6 +9,20 @@ namespace STmanager
 {
     class Utility
     {
+        public enum EventLogType
+        {
+            Login,
+            Logout
+        }
+
+        public enum EmployeePosition
+        {
+            Administrator,
+            Manager,
+            Saleperson
+        }
+
+        public static Employee CurrentEmployee;
         public static void MaximizeForm(Form DestinationForm)
         {
             DestinationForm.Size = new System.Drawing.Size(
@@ -84,7 +98,7 @@ namespace STmanager
         
         }
 
-        public static void addemp()
+        public static void TestAddEmployee()
         {
             using (SmartTimeModel DbContext = new SmartTimeModel())
             {
@@ -102,17 +116,24 @@ namespace STmanager
             
         
         }
-        public static bool TestLogin(string UserID)
+        public static bool TestLogin(string UserID, out Employee EmployeeLoggedIn)
         {
             using (SmartTimeModel DbContext = new SmartTimeModel())
             {
                 var User = (from s in DbContext.Employees
                             where s.emp_id == UserID 
-                            select s).ToList();
+                            select s).FirstOrDefault();
 
-                if (User.Count == 0)
+                if (User == null)
+                {
+                    EmployeeLoggedIn = null;
                     return false;
-                else return true;
+                }
+                else
+                {
+                    EmployeeLoggedIn = User;
+                    return true;
+                }
             }
         }
     }

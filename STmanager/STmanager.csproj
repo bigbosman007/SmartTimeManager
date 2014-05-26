@@ -78,7 +78,6 @@
     <Compile Include="Brand.cs">
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="cls.cs" />
     <Compile Include="dlgLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +85,9 @@
       <DependentUpon>dlgLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs">
+      <DependentUpon>SmartTimeModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EventLog.cs">
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">

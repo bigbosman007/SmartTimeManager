@@ -22,23 +22,15 @@ namespace STmanager
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (Utility.TestLogin(txtBarcode.Text)) 
+                if (Utility.TestLogin(txtBarcode.Text, out Utility.CurrentEmployee)) 
                 {
                     this.DialogResult = DialogResult.OK;
                 }
                 else
                 {
                     MessageBox.Show("Invalid User ID");
+                    txtBarcode.Clear();
                 }
-                /*if (txtBarcode.Text == "134679")
-                {
-                    this.DialogResult = DialogResult.OK;
-                }
-                else 
-                {
-                    MessageBox.Show("Invalid User ID");
-                }*/
-
             }
         }
     }

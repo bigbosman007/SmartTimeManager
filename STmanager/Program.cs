@@ -16,6 +16,8 @@ namespace STmanager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Utility.TestAddBranch();
+            //Utility.addemp();
             Application.Run(new frmMain());
         }
     }
