@@ -43,8 +43,15 @@ namespace STmanager
                         em.branch.branch_name
                         });
 
-                lsvDemo.Items.Add(item);
+                //lsvDemo.Items.Add(item);
             }
+        }
+
+        private void btnImg_Click(object sender, EventArgs e)
+        {
+
+ 
+
         }
     }
 }
