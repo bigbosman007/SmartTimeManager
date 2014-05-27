@@ -39,16 +39,16 @@ namespace STmanager
             get { return EmployeePositionConstant; }
             set
             {
-                switch (EmployeePositionConstant)
+                switch (value)
                 {
                     case ((int)EmployeePosition.Administrator):
                         EmployeePermissionObj = new AdministratorPermission();
                         break;
                     case ((int)EmployeePosition.Manager):
-                        throw new NotImplementedException();
+                        EmployeePermissionObj = new ManagerPermission();
                         break;
                     case ((int)EmployeePosition.Saleperson):
-                        throw new NotImplementedException();
+                        EmployeePermissionObj = new SalepersonPermission();
                         break;
                     default:
                         throw new InvalidOperationException(

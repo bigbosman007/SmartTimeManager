@@ -49,6 +49,7 @@ namespace STmanager
                 btnLogout.Text = "Logout";
                 lblEmployeePermission.Text = string.Format("Available tasks for {0}",
                     Utility.CurrentEmployee.EmployeePermission.Name);
+                mtabMainMenuHost.Visible = true;
                 return true;
             }
             return false;

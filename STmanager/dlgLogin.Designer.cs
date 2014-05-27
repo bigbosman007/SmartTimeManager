@@ -49,7 +49,7 @@
             this.txtBarcode.Location = new System.Drawing.Point(203, 131);
             this.txtBarcode.Name = "txtBarcode";
             this.txtBarcode.PasswordChar = '*';
-            this.txtBarcode.Size = new System.Drawing.Size(364, 47);
+            this.txtBarcode.Size = new System.Drawing.Size(364, 39);
             this.txtBarcode.TabIndex = 1;
             this.txtBarcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtBarcode.TextChanged += new System.EventHandler(this.txtBarcode_TextChanged);
@@ -62,7 +62,7 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
             this.label1.Location = new System.Drawing.Point(197, 89);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(244, 46);
+            this.label1.Size = new System.Drawing.Size(192, 36);
             this.label1.TabIndex = 2;
             this.label1.Text = "User Barcode";
             // 
@@ -74,7 +74,7 @@
             this.label2.ForeColor = System.Drawing.Color.Red;
             this.label2.Location = new System.Drawing.Point(200, 173);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(434, 21);
+            this.label2.Size = new System.Drawing.Size(336, 16);
             this.label2.TabIndex = 3;
             this.label2.Text = "*กรุณายิงบาร์โค้ดด้านหลังบัตรประจำตัวพนักงานเพื่อเข้าสู่ระบบ";
             // 
@@ -100,7 +100,7 @@
             // 
             // dlgLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -114,12 +114,14 @@
             this.Controls.Add(this.txtBarcode);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.Movable = false;
             this.Name = "dlgLogin";
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.SystemShadow;
+            this.ShowIcon = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "Login(เข้าสู่ระบบ)";
+            this.TopMost = true;
             this.Load += new System.EventHandler(this.dlgLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.smDlgLogin)).EndInit();
