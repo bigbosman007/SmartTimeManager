@@ -9,20 +9,7 @@ namespace STmanager
 {
     class Utility
     {
-        public enum EventLogType
-        {
-            Login,
-            Logout
-        }
-
-        public enum EmployeePosition
-        {
-            Administrator,
-            Manager,
-            Saleperson
-        }
-
-        public static Employee CurrentEmployee;
+        public static Employee CurrentEmployee = null;
         public static void MaximizeForm(Form DestinationForm)
         {
             DestinationForm.Size = new System.Drawing.Size(
@@ -30,6 +17,30 @@ namespace STmanager
                 Screen.PrimaryScreen.Bounds.Height);
         }
 
+        public static bool Login(string UserID, out Employee EmployeeLoggedIn)
+        {
+            using (SmartTimeModel DbContext = new SmartTimeModel())
+            {
+                var User = (from s in DbContext.Employees
+                            where s.emp_id == UserID 
+                            select s).FirstOrDefault<Employee>();
+
+                if (User == null)
+                {
+                    EmployeeLoggedIn = null;
+                    return false;
+                }
+                else
+                {
+                    EmployeeLoggedIn = User;
+                    return true;
+                }
+            }
+        }
+    }
+
+    class LinqEFTest
+    {
         public static void TestAddBranch()
         {
             using (SmartTimeModel DbContext = new SmartTimeModel())
@@ -95,7 +106,7 @@ namespace STmanager
                             select new { emp, branch };
                 return empin.ToList();
             }
-        
+
         }
 
         public static void TestAddEmployee()
@@ -113,28 +124,8 @@ namespace STmanager
                 DbContext.Employees.Add(emp);
                 DbContext.SaveChanges();
             }
-            
-        
-        }
-        public static bool TestLogin(string UserID, out Employee EmployeeLoggedIn)
-        {
-            using (SmartTimeModel DbContext = new SmartTimeModel())
-            {
-                var User = (from s in DbContext.Employees
-                            where s.emp_id == UserID 
-                            select s).FirstOrDefault();
 
-                if (User == null)
-                {
-                    EmployeeLoggedIn = null;
-                    return false;
-                }
-                else
-                {
-                    EmployeeLoggedIn = User;
-                    return true;
-                }
-            }
+
         }
     }
 

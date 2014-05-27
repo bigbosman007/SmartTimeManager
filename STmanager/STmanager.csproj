@@ -90,11 +90,18 @@
     <Compile Include="EventLog.cs">
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="ExtendDataObject.cs" />
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProducts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProducts.Designer.cs">
+      <DependentUpon>frmProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSale.cs">
       <SubType>Form</SubType>
@@ -108,6 +115,7 @@
     <Compile Include="Model.cs">
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Permission.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sale.cs">
@@ -143,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProducts.resx">
+      <DependentUpon>frmProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSale.resx">
       <DependentUpon>frmSale.cs</DependentUpon>

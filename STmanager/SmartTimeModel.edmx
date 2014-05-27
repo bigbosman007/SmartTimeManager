@@ -46,6 +46,7 @@
           <Property Name="emp_last" Type="varchar" MaxLength="45" />
           <Property Name="emp_tel" Type="varchar" MaxLength="45" />
           <Property Name="Branch_branch_id" Type="int" Nullable="false" />
+          <Property Name="emp_position" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="eventlog">
           <Key>
@@ -500,6 +501,7 @@
           <NavigationProperty Name="eventlogs" Relationship="smarttime_storeModel.fk_EventLog_Employee1" FromRole="employee" ToRole="eventlog" />
           <NavigationProperty Name="sales" Relationship="smarttime_storeModel.fk_Sale_Employee1" FromRole="employee" ToRole="sale" />
           <NavigationProperty Name="shippings" Relationship="smarttime_storeModel.fk_Shipping_Employee1" FromRole="employee" ToRole="shipping" />
+          <Property Name="emp_position" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="EventLog">
           <Key>
@@ -830,6 +832,7 @@
           <EntitySetMapping Name="Employees">
             <EntityTypeMapping TypeName="smarttime_storeModel.Employee">
               <MappingFragment StoreEntitySet="employee">
+                <ScalarProperty Name="emp_position" ColumnName="emp_position" />
                 <ScalarProperty Name="Branch_branch_id" ColumnName="Branch_branch_id" />
                 <ScalarProperty Name="emp_tel" ColumnName="emp_tel" />
                 <ScalarProperty Name="emp_last" ColumnName="emp_last" />

@@ -20,38 +20,50 @@ namespace STmanager
         private void frmMain_Load(object sender, EventArgs e)
         {
             Utility.MaximizeForm(this);
+            btnLogout.PerformClick();
+            
+            /*
+            frmProducts frmProduct = new frmProducts()
+            {
+                ShadowType = MetroFramework.Forms.MetroFormShadowType.None,
+                Dock = DockStyle.Fill,
+                TopLevel = false,
+                Visible = true,
+                ControlBox = false
+            };
+            pnlFrmDock.Controls.Add(frmProduct);
+             */
+        }
 
+        private bool Login()
+        {
             dlgLogin dlgLogin = new dlgLogin();
             DialogResult LoginResult = dlgLogin.ShowDialog();
 
             if (LoginResult == DialogResult.OK)
             {
-                metroLabel1.Text = "Login State : Logged";
+                lblCurrentEmpID.Text = Utility.CurrentEmployee.emp_id;
+                lblCurrentEmpName.Text = string.Format("Welcome : {0} {1}",
+                    Utility.CurrentEmployee.emp_name,
+                    Utility.CurrentEmployee.emp_last);
+                btnLogout.Text = "Logout";
+                MessageBox.Show(Utility.CurrentEmployee.EmployeePermission.AllowBranchManagement.ToString());
+                return true;
             }
-
-            var emp = Utility.testjoinn();
-            foreach(var em in emp)
-            {
-                ListViewItem item = new ListViewItem()
-                {
-                    Text = em.emp.emp_id
-                };
-                item.SubItems.AddRange(new string[]
-                        {
-                        em.emp.emp_name,
-                        em.emp.emp_tel,
-                        em.branch.branch_name
-                        });
-
-                //lsvDemo.Items.Add(item);
-            }
+            return false;
         }
 
-        private void btnImg_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-
- 
-
+            if(Utility.CurrentEmployee != null)
+            {
+                Utility.CurrentEmployee = null;
+                btnLogout.Text = "Login";
+                lblCurrentEmpID.Text = "Logged Out";
+                lblCurrentEmpName.Text = "Waiting for user";
+                mtabMainMenuHost.Visible = false;
+            }
+            while (!Login()) ;
         }
     }
 }

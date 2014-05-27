@@ -26,7 +26,7 @@ namespace STmanager
         public string emp_last { get; set; }
         public string emp_tel { get; set; }
         public int Branch_branch_id { get; set; }
-    
+        //public virtual int emp_position { get; set; }
         public virtual Branch branch { get; set; }
         public virtual ICollection<EventLog> eventlogs { get; set; }
         public virtual ICollection<Sale> sales { get; set; }

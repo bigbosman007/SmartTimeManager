@@ -28,349 +28,233 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.components = new System.ComponentModel.Container();
+            this.lblCurrentEmpID = new MetroFramework.Controls.MetroLabel();
+            this.btnLogout = new MetroFramework.Controls.MetroButton();
+            this.msmFrmMain = new MetroFramework.Components.MetroStyleManager(this.components);
+            this.mseFrmMain = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.mtabMainMenuHost = new MetroFramework.Controls.MetroTabControl();
+            this.tpageHome = new System.Windows.Forms.TabPage();
+            this.pnlFrmDock = new MetroFramework.Controls.MetroPanel();
+            this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
             this.label1 = new System.Windows.Forms.Label();
-            this.metroButton1 = new MetroFramework.Controls.MetroButton();
-            this.metroButton2 = new MetroFramework.Controls.MetroButton();
-            this.metroButton3 = new MetroFramework.Controls.MetroButton();
-            this.metroButton4 = new MetroFramework.Controls.MetroButton();
-            this.metroButton5 = new MetroFramework.Controls.MetroButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtGoodsId = new System.Windows.Forms.TextBox();
-            this.txtGoodsName = new System.Windows.Forms.TextBox();
-            this.txtPrice = new System.Windows.Forms.TextBox();
-            this.cmbBrand = new MetroFramework.Controls.MetroComboBox();
-            this.cmbModel = new MetroFramework.Controls.MetroComboBox();
-            this.btnBrand = new MetroFramework.Controls.MetroButton();
-            this.btnModel = new MetroFramework.Controls.MetroButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnImg = new MetroFramework.Controls.MetroButton();
-            this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.metroTile2 = new MetroFramework.Controls.MetroTile();
+            this.metroTile3 = new MetroFramework.Controls.MetroTile();
+            this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).BeginInit();
+            this.mtabMainMenuHost.SuspendLayout();
+            this.tpageHome.SuspendLayout();
+            this.pnlFrmDock.SuspendLayout();
+            this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // metroLabel1
+            // lblCurrentEmpID
             // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(31, 74);
-            this.metroLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(123, 20);
-            this.metroLabel1.TabIndex = 0;
-            this.metroLabel1.Text = "Login State : None";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCurrentEmpID.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCurrentEmpID.Location = new System.Drawing.Point(375, 11);
+            this.lblCurrentEmpID.Name = "lblCurrentEmpID";
+            this.lblCurrentEmpID.Size = new System.Drawing.Size(317, 23);
+            this.lblCurrentEmpID.TabIndex = 0;
+            this.lblCurrentEmpID.Text = "EmpID";
+            this.lblCurrentEmpID.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogout.Location = new System.Drawing.Point(698, 13);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(111, 43);
+            this.btnLogout.TabIndex = 24;
+            this.btnLogout.Text = "Logout";
+            this.btnLogout.UseSelectable = true;
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // msmFrmMain
+            // 
+            this.msmFrmMain.Owner = this;
+            this.msmFrmMain.Style = MetroFramework.MetroColorStyle.Orange;
+            // 
+            // mtabMainMenuHost
+            // 
+            this.mtabMainMenuHost.Controls.Add(this.tpageHome);
+            this.mtabMainMenuHost.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mtabMainMenuHost.FontSize = MetroFramework.MetroTabControlSize.Tall;
+            this.mtabMainMenuHost.FontWeight = MetroFramework.MetroTabControlWeight.Regular;
+            this.mtabMainMenuHost.Location = new System.Drawing.Point(20, 60);
+            this.mtabMainMenuHost.Name = "mtabMainMenuHost";
+            this.mtabMainMenuHost.Padding = new System.Drawing.Point(6, 8);
+            this.mtabMainMenuHost.SelectedIndex = 0;
+            this.mtabMainMenuHost.Size = new System.Drawing.Size(792, 580);
+            this.mtabMainMenuHost.TabIndex = 28;
+            this.mtabMainMenuHost.UseSelectable = true;
+            // 
+            // tpageHome
+            // 
+            this.tpageHome.Controls.Add(this.pnlFrmDock);
+            this.tpageHome.Location = new System.Drawing.Point(4, 44);
+            this.tpageHome.Name = "tpageHome";
+            this.tpageHome.Padding = new System.Windows.Forms.Padding(3);
+            this.tpageHome.Size = new System.Drawing.Size(784, 532);
+            this.tpageHome.TabIndex = 0;
+            this.tpageHome.Text = "Home";
+            this.tpageHome.UseVisualStyleBackColor = true;
+            // 
+            // pnlFrmDock
+            // 
+            this.pnlFrmDock.Controls.Add(this.metroLabel1);
+            this.pnlFrmDock.Controls.Add(this.flowLayoutPanel1);
+            this.pnlFrmDock.Controls.Add(this.label1);
+            this.pnlFrmDock.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFrmDock.HorizontalScrollbarBarColor = true;
+            this.pnlFrmDock.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlFrmDock.HorizontalScrollbarSize = 10;
+            this.pnlFrmDock.Location = new System.Drawing.Point(3, 3);
+            this.pnlFrmDock.Name = "pnlFrmDock";
+            this.pnlFrmDock.Size = new System.Drawing.Size(778, 526);
+            this.pnlFrmDock.TabIndex = 0;
+            this.pnlFrmDock.VerticalScrollbarBarColor = true;
+            this.pnlFrmDock.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlFrmDock.VerticalScrollbarSize = 10;
+            // 
+            // lblCurrentEmpName
+            // 
+            this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCurrentEmpName.Location = new System.Drawing.Point(375, 34);
+            this.lblCurrentEmpName.Name = "lblCurrentEmpName";
+            this.lblCurrentEmpName.Size = new System.Drawing.Size(317, 23);
+            this.lblCurrentEmpName.TabIndex = 29;
+            this.lblCurrentEmpName.Text = "EmpName EmpLast";
+            this.lblCurrentEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label1.Location = new System.Drawing.Point(31, 220);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mseFrmMain.SetApplyMetroTheme(this.label1, true);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(74, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(159, 29);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "รหัสสินค้า    ::";
+            this.label1.Size = new System.Drawing.Size(628, 86);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Welcome to SmartTime Manager Client";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroButton1
+            // flowLayoutPanel1
             // 
-            this.metroButton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(222)));
-            this.metroButton1.Location = new System.Drawing.Point(31, 106);
-            this.metroButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton1.Name = "metroButton1";
-            this.metroButton1.Size = new System.Drawing.Size(220, 84);
-            this.metroButton1.TabIndex = 3;
-            this.metroButton1.Text = "จัดการสินค้า";
-            this.metroButton1.UseSelectable = true;
-            this.metroButton1.UseVisualStyleBackColor = true;
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.Controls.Add(this.metroTile1);
+            this.flowLayoutPanel1.Controls.Add(this.metroTile2);
+            this.flowLayoutPanel1.Controls.Add(this.metroTile3);
+            this.flowLayoutPanel1.Controls.Add(this.metroTile4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(82, 163);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(620, 300);
+            this.flowLayoutPanel1.TabIndex = 3;
             // 
-            // metroButton2
+            // metroLabel1
             // 
-            this.metroButton2.Location = new System.Drawing.Point(259, 106);
-            this.metroButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton2.Name = "metroButton2";
-            this.metroButton2.Size = new System.Drawing.Size(220, 84);
-            this.metroButton2.TabIndex = 4;
-            this.metroButton2.Text = "metroButton2";
-            this.metroButton2.UseSelectable = true;
-            this.metroButton2.UseVisualStyleBackColor = true;
+            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(297, 115);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(196, 31);
+            this.metroLabel1.TabIndex = 4;
+            this.metroLabel1.Text = "Please select task below";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // metroButton3
+            // metroTile1
             // 
-            this.metroButton3.Location = new System.Drawing.Point(487, 106);
-            this.metroButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton3.Name = "metroButton3";
-            this.metroButton3.Size = new System.Drawing.Size(220, 84);
-            this.metroButton3.TabIndex = 5;
-            this.metroButton3.Text = "metroButton3";
-            this.metroButton3.UseSelectable = true;
-            this.metroButton3.UseVisualStyleBackColor = true;
+            this.metroTile1.ActiveControl = null;
+            this.metroTile1.Location = new System.Drawing.Point(3, 3);
+            this.metroTile1.Name = "metroTile1";
+            this.metroTile1.Size = new System.Drawing.Size(128, 100);
+            this.metroTile1.TabIndex = 0;
+            this.metroTile1.Text = "metroTile1";
+            this.metroTile1.UseSelectable = true;
+            this.metroTile1.UseVisualStyleBackColor = true;
             // 
-            // metroButton4
+            // metroTile2
             // 
-            this.metroButton4.Location = new System.Drawing.Point(715, 106);
-            this.metroButton4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton4.Name = "metroButton4";
-            this.metroButton4.Size = new System.Drawing.Size(220, 84);
-            this.metroButton4.TabIndex = 6;
-            this.metroButton4.Text = "metroButton4";
-            this.metroButton4.UseSelectable = true;
-            this.metroButton4.UseVisualStyleBackColor = true;
+            this.metroTile2.ActiveControl = null;
+            this.metroTile2.Location = new System.Drawing.Point(137, 3);
+            this.metroTile2.Name = "metroTile2";
+            this.metroTile2.Size = new System.Drawing.Size(128, 100);
+            this.metroTile2.TabIndex = 1;
+            this.metroTile2.Text = "metroTile2";
+            this.metroTile2.UseSelectable = true;
+            this.metroTile2.UseVisualStyleBackColor = true;
             // 
-            // metroButton5
+            // metroTile3
             // 
-            this.metroButton5.Location = new System.Drawing.Point(943, 106);
-            this.metroButton5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.metroButton5.Name = "metroButton5";
-            this.metroButton5.Size = new System.Drawing.Size(220, 84);
-            this.metroButton5.TabIndex = 7;
-            this.metroButton5.Text = "metroButton5";
-            this.metroButton5.UseSelectable = true;
-            this.metroButton5.UseVisualStyleBackColor = true;
+            this.metroTile3.ActiveControl = null;
+            this.metroTile3.Location = new System.Drawing.Point(271, 3);
+            this.metroTile3.Name = "metroTile3";
+            this.metroTile3.Size = new System.Drawing.Size(128, 100);
+            this.metroTile3.TabIndex = 2;
+            this.metroTile3.Text = "metroTile3";
+            this.metroTile3.UseSelectable = true;
+            this.metroTile3.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // metroTile4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label2.Location = new System.Drawing.Point(28, 326);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 29);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "รหัสรุ่นสินค้า ::";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label3.Location = new System.Drawing.Point(31, 366);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(161, 29);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "ยี่ห้อ           ::";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label4.Location = new System.Drawing.Point(35, 407);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(158, 29);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "รุ่น             ::";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label5.Location = new System.Drawing.Point(35, 450);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(158, 29);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "ราคา          ::";
-            // 
-            // txtGoodsId
-            // 
-            this.txtGoodsId.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtGoodsId.Location = new System.Drawing.Point(208, 217);
-            this.txtGoodsId.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtGoodsId.Name = "txtGoodsId";
-            this.txtGoodsId.Size = new System.Drawing.Size(269, 36);
-            this.txtGoodsId.TabIndex = 12;
-            // 
-            // txtGoodsName
-            // 
-            this.txtGoodsName.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtGoodsName.Location = new System.Drawing.Point(208, 322);
-            this.txtGoodsName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtGoodsName.Name = "txtGoodsName";
-            this.txtGoodsName.Size = new System.Drawing.Size(269, 36);
-            this.txtGoodsName.TabIndex = 13;
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.txtPrice.Location = new System.Drawing.Point(208, 450);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(269, 36);
-            this.txtPrice.TabIndex = 14;
-            // 
-            // cmbBrand
-            // 
-            this.cmbBrand.FormattingEnabled = true;
-            this.cmbBrand.ItemHeight = 24;
-            this.cmbBrand.Location = new System.Drawing.Point(208, 366);
-            this.cmbBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbBrand.Name = "cmbBrand";
-            this.cmbBrand.Size = new System.Drawing.Size(269, 30);
-            this.cmbBrand.TabIndex = 15;
-            this.cmbBrand.UseSelectable = true;
-            // 
-            // cmbModel
-            // 
-            this.cmbModel.FormattingEnabled = true;
-            this.cmbModel.ItemHeight = 24;
-            this.cmbModel.Location = new System.Drawing.Point(208, 407);
-            this.cmbModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cmbModel.Name = "cmbModel";
-            this.cmbModel.Size = new System.Drawing.Size(269, 30);
-            this.cmbModel.TabIndex = 16;
-            this.cmbModel.UseSelectable = true;
-            // 
-            // btnBrand
-            // 
-            this.btnBrand.Location = new System.Drawing.Point(496, 370);
-            this.btnBrand.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnBrand.Name = "btnBrand";
-            this.btnBrand.Size = new System.Drawing.Size(112, 25);
-            this.btnBrand.TabIndex = 17;
-            this.btnBrand.Text = "เพิ่มเติม";
-            this.btnBrand.UseSelectable = true;
-            this.btnBrand.UseVisualStyleBackColor = true;
-            // 
-            // btnModel
-            // 
-            this.btnModel.Location = new System.Drawing.Point(496, 412);
-            this.btnModel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnModel.Name = "btnModel";
-            this.btnModel.Size = new System.Drawing.Size(112, 25);
-            this.btnModel.TabIndex = 18;
-            this.btnModel.Text = "เพิ่มเติม";
-            this.btnModel.UseSelectable = true;
-            this.btnModel.UseVisualStyleBackColor = true;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("3 of 9 Barcode", 50.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(196, 257);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(371, 64);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "Barcode";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Image = global::STmanager.Properties.Resources.Untitled_1;
-            this.pictureBox1.Location = new System.Drawing.Point(208, 566);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(270, 251);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.textBox1.Location = new System.Drawing.Point(208, 522);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(269, 36);
-            this.textBox1.TabIndex = 21;
-            // 
-            // btnImg
-            // 
-            this.btnImg.Location = new System.Drawing.Point(496, 530);
-            this.btnImg.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnImg.Name = "btnImg";
-            this.btnImg.Size = new System.Drawing.Size(112, 25);
-            this.btnImg.TabIndex = 22;
-            this.btnImg.Text = "เลือก File";
-            this.btnImg.UseSelectable = true;
-            this.btnImg.UseVisualStyleBackColor = true;
-            this.btnImg.Click += new System.EventHandler(this.btnImg_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 14F);
-            this.label7.Location = new System.Drawing.Point(35, 526);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 29);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "เลือกภาพ    ::";
+            this.metroTile4.ActiveControl = null;
+            this.metroTile4.Location = new System.Drawing.Point(405, 3);
+            this.metroTile4.Name = "metroTile4";
+            this.metroTile4.Size = new System.Drawing.Size(128, 100);
+            this.metroTile4.TabIndex = 3;
+            this.metroTile4.Text = "metroTile4";
+            this.metroTile4.UseSelectable = true;
+            this.metroTile4.UseVisualStyleBackColor = true;
             // 
             // frmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1692, 945);
+            this.ClientSize = new System.Drawing.Size(832, 660);
             this.ControlBox = false;
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnImg);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.btnModel);
-            this.Controls.Add(this.btnBrand);
-            this.Controls.Add(this.cmbModel);
-            this.Controls.Add(this.cmbBrand);
-            this.Controls.Add(this.txtPrice);
-            this.Controls.Add(this.txtGoodsName);
-            this.Controls.Add(this.txtGoodsId);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.metroButton5);
-            this.Controls.Add(this.metroButton4);
-            this.Controls.Add(this.metroButton3);
-            this.Controls.Add(this.metroButton2);
-            this.Controls.Add(this.metroButton1);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.metroLabel1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Controls.Add(this.lblCurrentEmpName);
+            this.Controls.Add(this.mtabMainMenuHost);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.lblCurrentEmpID);
             this.Movable = false;
             this.Name = "frmMain";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Resizable = false;
             this.Style = MetroFramework.MetroColorStyle.Orange;
-            this.Text = "Goods Manager Client";
+            this.Text = "SmartTime Manager Client";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmMain_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).EndInit();
+            this.mtabMainMenuHost.ResumeLayout(false);
+            this.tpageHome.ResumeLayout(false);
+            this.pnlFrmDock.ResumeLayout(false);
+            this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
+        private MetroFramework.Controls.MetroLabel lblCurrentEmpID;
+        private MetroFramework.Controls.MetroButton btnLogout;
+        private MetroFramework.Components.MetroStyleManager msmFrmMain;
+        private MetroFramework.Components.MetroStyleExtender mseFrmMain;
+        private MetroFramework.Controls.MetroTabControl mtabMainMenuHost;
+        private System.Windows.Forms.TabPage tpageHome;
+        private MetroFramework.Controls.MetroLabel lblCurrentEmpName;
+        private MetroFramework.Controls.MetroPanel pnlFrmDock;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private MetroFramework.Controls.MetroButton metroButton1;
-        private MetroFramework.Controls.MetroButton metroButton2;
-        private MetroFramework.Controls.MetroButton metroButton3;
-        private MetroFramework.Controls.MetroButton metroButton4;
-        private MetroFramework.Controls.MetroButton metroButton5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtGoodsId;
-        private System.Windows.Forms.TextBox txtGoodsName;
-        private System.Windows.Forms.TextBox txtPrice;
-        private MetroFramework.Controls.MetroComboBox cmbBrand;
-        private MetroFramework.Controls.MetroComboBox cmbModel;
-        private MetroFramework.Controls.MetroButton btnBrand;
-        private MetroFramework.Controls.MetroButton btnModel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private MetroFramework.Controls.MetroButton btnImg;
-        private System.Windows.Forms.Label label7;
+        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile metroTile2;
+        private MetroFramework.Controls.MetroTile metroTile3;
+        private MetroFramework.Controls.MetroTile metroTile4;
     }
 }
