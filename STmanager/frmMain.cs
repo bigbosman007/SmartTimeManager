@@ -47,7 +47,8 @@ namespace STmanager
                     Utility.CurrentEmployee.emp_name,
                     Utility.CurrentEmployee.emp_last);
                 btnLogout.Text = "Logout";
-                MessageBox.Show(Utility.CurrentEmployee.EmployeePermission.AllowBranchManagement.ToString());
+                lblEmployeePermission.Text = string.Format("Available tasks for {0}",
+                    Utility.CurrentEmployee.EmployeePermission.Name);
                 return true;
             }
             return false;

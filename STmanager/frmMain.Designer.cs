@@ -33,17 +33,17 @@
             this.btnLogout = new MetroFramework.Controls.MetroButton();
             this.msmFrmMain = new MetroFramework.Components.MetroStyleManager(this.components);
             this.mseFrmMain = new MetroFramework.Components.MetroStyleExtender(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.mtabMainMenuHost = new MetroFramework.Controls.MetroTabControl();
             this.tpageHome = new System.Windows.Forms.TabPage();
             this.pnlFrmDock = new MetroFramework.Controls.MetroPanel();
-            this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblEmployeePermission = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTile1 = new MetroFramework.Controls.MetroTile();
             this.metroTile2 = new MetroFramework.Controls.MetroTile();
             this.metroTile3 = new MetroFramework.Controls.MetroTile();
             this.metroTile4 = new MetroFramework.Controls.MetroTile();
+            this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).BeginInit();
             this.mtabMainMenuHost.SuspendLayout();
             this.tpageHome.SuspendLayout();
@@ -78,6 +78,19 @@
             this.msmFrmMain.Owner = this;
             this.msmFrmMain.Style = MetroFramework.MetroColorStyle.Orange;
             // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mseFrmMain.SetApplyMetroTheme(this.label1, true);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(74, 29);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(628, 86);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Welcome to SmartTime Manager Client";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // mtabMainMenuHost
             // 
             this.mtabMainMenuHost.Controls.Add(this.tpageHome);
@@ -105,7 +118,7 @@
             // 
             // pnlFrmDock
             // 
-            this.pnlFrmDock.Controls.Add(this.metroLabel1);
+            this.pnlFrmDock.Controls.Add(this.lblEmployeePermission);
             this.pnlFrmDock.Controls.Add(this.flowLayoutPanel1);
             this.pnlFrmDock.Controls.Add(this.label1);
             this.pnlFrmDock.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -120,28 +133,17 @@
             this.pnlFrmDock.VerticalScrollbarHighlightOnWheel = false;
             this.pnlFrmDock.VerticalScrollbarSize = 10;
             // 
-            // lblCurrentEmpName
+            // lblEmployeePermission
             // 
-            this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCurrentEmpName.Location = new System.Drawing.Point(375, 34);
-            this.lblCurrentEmpName.Name = "lblCurrentEmpName";
-            this.lblCurrentEmpName.Size = new System.Drawing.Size(317, 23);
-            this.lblCurrentEmpName.TabIndex = 29;
-            this.lblCurrentEmpName.Text = "EmpName EmpLast";
-            this.lblCurrentEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblEmployeePermission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.mseFrmMain.SetApplyMetroTheme(this.label1, true);
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(74, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(628, 86);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Welcome to SmartTime Manager Client";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmployeePermission.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.lblEmployeePermission.Location = new System.Drawing.Point(251, 115);
+            this.lblEmployeePermission.Name = "lblEmployeePermission";
+            this.lblEmployeePermission.Size = new System.Drawing.Size(300, 31);
+            this.lblEmployeePermission.TabIndex = 4;
+            this.lblEmployeePermission.Text = "Available task for EmployeePermission";
+            this.lblEmployeePermission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1
             // 
@@ -152,22 +154,10 @@
             this.flowLayoutPanel1.Controls.Add(this.metroTile2);
             this.flowLayoutPanel1.Controls.Add(this.metroTile3);
             this.flowLayoutPanel1.Controls.Add(this.metroTile4);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(82, 163);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(74, 163);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(620, 300);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(628, 300);
             this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(297, 115);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(196, 31);
-            this.metroLabel1.TabIndex = 4;
-            this.metroLabel1.Text = "Please select task below";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // metroTile1
             // 
@@ -213,6 +203,16 @@
             this.metroTile4.UseSelectable = true;
             this.metroTile4.UseVisualStyleBackColor = true;
             // 
+            // lblCurrentEmpName
+            // 
+            this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCurrentEmpName.Location = new System.Drawing.Point(375, 34);
+            this.lblCurrentEmpName.Name = "lblCurrentEmpName";
+            this.lblCurrentEmpName.Size = new System.Drawing.Size(317, 23);
+            this.lblCurrentEmpName.TabIndex = 29;
+            this.lblCurrentEmpName.Text = "EmpName EmpLast";
+            this.lblCurrentEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,7 +249,7 @@
         private System.Windows.Forms.TabPage tpageHome;
         private MetroFramework.Controls.MetroLabel lblCurrentEmpName;
         private MetroFramework.Controls.MetroPanel pnlFrmDock;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroLabel lblEmployeePermission;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTile metroTile1;
