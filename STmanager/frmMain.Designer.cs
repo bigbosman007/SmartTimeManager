@@ -138,11 +138,11 @@
             this.lblEmployeePermission.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblEmployeePermission.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.lblEmployeePermission.Location = new System.Drawing.Point(251, 115);
+            this.lblEmployeePermission.Location = new System.Drawing.Point(162, 115);
             this.lblEmployeePermission.Name = "lblEmployeePermission";
-            this.lblEmployeePermission.Size = new System.Drawing.Size(300, 31);
+            this.lblEmployeePermission.Size = new System.Drawing.Size(445, 31);
             this.lblEmployeePermission.TabIndex = 4;
-            this.lblEmployeePermission.Text = "Available task for EmployeePermission";
+            this.lblEmployeePermission.Text = "Available task for EmployeePermission.Name";
             this.lblEmployeePermission.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // flowLayoutPanel1

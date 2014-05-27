@@ -23,18 +23,21 @@ namespace STmanager
             btnLogout.PerformClick();
             
             /*
-            frmProducts frmProduct = new frmProducts()
-            {
-                ShadowType = MetroFramework.Forms.MetroFormShadowType.None,
-                Dock = DockStyle.Fill,
-                TopLevel = false,
-                Visible = true,
-                ControlBox = false
-            };
+            frmProducts frmProduct = new frmProducts();
+            PrepareChildForm(ref frmProduct);
             pnlFrmDock.Controls.Add(frmProduct);
              */
         }
 
+        private void PrepareChildForm(ref MetroForm DestinationForm)
+        {
+            DestinationForm.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
+            DestinationForm.Dock = DockStyle.Fill;
+            DestinationForm.TopLevel = false;
+            DestinationForm.Visible = true;
+            DestinationForm.ControlBox = false;
+
+        }
         private bool Login()
         {
             dlgLogin dlgLogin = new dlgLogin();
