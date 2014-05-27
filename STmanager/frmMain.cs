@@ -29,7 +29,7 @@ namespace STmanager
              */
         }
 
-        private void PrepareChildForm(ref MetroForm DestinationForm)
+        private void PrepareChildForm(MetroForm DestinationForm)
         {
             DestinationForm.ShadowType = MetroFramework.Forms.MetroFormShadowType.None;
             DestinationForm.Dock = DockStyle.Fill;
@@ -52,6 +52,11 @@ namespace STmanager
                 btnLogout.Text = "Logout";
                 lblEmployeePermission.Text = string.Format("Available tasks for {0}",
                     Utility.CurrentEmployee.EmployeePermission.Name);
+                if (Utility.CurrentEmployee.EmployeePermission.AllowProductAddEditDelete)
+                    lblEmployeePermission.Visible = true;
+
+                else lblEmployeePermission.Visible = false;
+
                 mtabMainMenuHost.Visible = true;
                 return true;
             }
@@ -69,6 +74,16 @@ namespace STmanager
                 mtabMainMenuHost.Visible = false;
             }
             while (!Login()) ;
+        }
+
+        private void tileProductManagement_Click(object sender, EventArgs e)
+        {
+            TabPage rrr = new TabPage("Product");
+            frmProducts frmProduct = new frmProducts();
+            PrepareChildForm(frmProduct);
+            rrr.Controls.Add(frmProduct);
+            mtabMainMenuHost.TabPages.Add(rrr);
+            
         }
     }
 }
