@@ -83,7 +83,7 @@ namespace STmanager
             PrepareChildForm(frmProduct);
             rrr.Controls.Add(frmProduct);
             mtabMainMenuHost.TabPages.Add(rrr);
-            
+            mtabMainMenuHost.SelectedTab = rrr;
         }
     }
 }
