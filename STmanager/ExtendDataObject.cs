@@ -17,7 +17,7 @@ namespace STmanager
 
     partial class Employee
     {
-        PermissionBase EmployeePermissionObj;
+        //PermissionBase EmployeePermissionObj;
         public enum EmployeePosition
         {
             Administrator,
@@ -25,13 +25,7 @@ namespace STmanager
             Saleperson
         }
 
-        public PermissionBase EmployeePermission
-        {
-            get
-            {
-                return EmployeePermissionObj;
-            }
-        }
+        public PermissionBase EmployeePermission {get; private set;}
 
         private int EmployeePositionConstant;
         public int emp_position
@@ -42,13 +36,13 @@ namespace STmanager
                 switch (value)
                 {
                     case ((int)EmployeePosition.Administrator):
-                        EmployeePermissionObj = new AdministratorPermission();
+                        EmployeePermission = new AdministratorPermission();
                         break;
                     case ((int)EmployeePosition.Manager):
-                        EmployeePermissionObj = new ManagerPermission();
+                        EmployeePermission = new ManagerPermission();
                         break;
                     case ((int)EmployeePosition.Saleperson):
-                        EmployeePermissionObj = new SalepersonPermission();
+                        EmployeePermission = new SalepersonPermission();
                         break;
                     default:
                         throw new InvalidOperationException(
