@@ -96,7 +96,6 @@ namespace STmanager
             PrepareChildForm(frmSale);
             SaleManager.Controls.Add(frmSale);
             mtabMainMenuHost.TabPages.Add(SaleManager);
-            
         }
     }
 }
