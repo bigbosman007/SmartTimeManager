@@ -21,6 +21,11 @@ namespace STmanager
         {
             using (SmartTimeModel DbContext = new SmartTimeModel())
             {
+                
+                
+                
+                
+                
                 var User = (from s in DbContext.Employees
                             where s.emp_id == UserID 
                             select s).FirstOrDefault<Employee>();

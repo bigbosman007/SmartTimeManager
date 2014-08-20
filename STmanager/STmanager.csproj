@@ -84,6 +84,24 @@
     <Compile Include="dlgLogin.Designer.cs">
       <DependentUpon>dlgLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="dlgManageBrand.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgManageBrand.Designer.cs">
+      <DependentUpon>dlgManageBrand.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgManageEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgManageEmployee.Designer.cs">
+      <DependentUpon>dlgManageEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dlgManageModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgManageModel.Designer.cs">
+      <DependentUpon>dlgManageModel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Employee.cs">
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
@@ -91,6 +109,24 @@
       <DependentUpon>SmartTimeModel.tt</DependentUpon>
     </Compile>
     <Compile Include="ExtendDataObject.cs" />
+    <Compile Include="dlgProductManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dlgProductManager.Designer.cs">
+      <DependentUpon>dlgProductManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBranch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBranch.Designer.cs">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +184,24 @@
     <Compile Include="Utility.cs" />
     <EmbeddedResource Include="dlgLogin.resx">
       <DependentUpon>dlgLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgManageBrand.resx">
+      <DependentUpon>dlgManageBrand.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgManageEmployee.resx">
+      <DependentUpon>dlgManageEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgManageModel.resx">
+      <DependentUpon>dlgManageModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dlgProductManager.resx">
+      <DependentUpon>dlgProductManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBranch.resx">
+      <DependentUpon>frmBranch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployee.resx">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

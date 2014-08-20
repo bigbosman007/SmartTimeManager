@@ -11,20 +11,24 @@ using MetroFramework.Forms;
 
 namespace STmanager
 {
-    public partial class frmProducts : MetroForm
+    public partial class frmEmployee : MetroForm
     {
-        public frmProducts()
+
+        public frmEmployee()
         {
             InitializeComponent();
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void frmEmployee_Load(object sender, EventArgs e)
         {
 
-            dlgProductManager dlgProduct = new dlgProductManager();
-            dlgProduct.Show();
-            
+        }
 
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
         }
     }
 }
+
+

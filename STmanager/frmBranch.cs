@@ -11,19 +11,20 @@ using MetroFramework.Forms;
 
 namespace STmanager
 {
-    public partial class frmProducts : MetroForm
+    public partial class frmBranch : MetroForm
     {
-        public frmProducts()
+        public frmBranch()
         {
             InitializeComponent();
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void frmBranch_Load(object sender, EventArgs e)
         {
 
-            dlgProductManager dlgProduct = new dlgProductManager();
-            dlgProduct.Show();
-            
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
 
         }
     }

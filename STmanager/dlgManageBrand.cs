@@ -8,22 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
-
 namespace STmanager
 {
-    public partial class frmProducts : MetroForm
+    public partial class dlgManageBrand : MetroForm
     {
-        public frmProducts()
+        public dlgManageBrand()
         {
             InitializeComponent();
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void dlgManagerBrand_Load(object sender, EventArgs e)
         {
-
-            dlgProductManager dlgProduct = new dlgProductManager();
-            dlgProduct.Show();
-            
 
         }
     }

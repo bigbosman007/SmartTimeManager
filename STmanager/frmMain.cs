@@ -78,11 +78,24 @@ namespace STmanager
 
         private void tileProductManagement_Click(object sender, EventArgs e)
         {
-            TabPage rrr = new TabPage("Product");
+            TabPage ProductManager = new TabPage("Product");
             frmProducts frmProduct = new frmProducts();
             PrepareChildForm(frmProduct);
-            rrr.Controls.Add(frmProduct);
-            mtabMainMenuHost.TabPages.Add(rrr);
+            ProductManager.Controls.Add(frmProduct);
+            mtabMainMenuHost.TabPages.Add(ProductManager);
+            
+
+
+            
+        }
+
+        private void tileSaleManagement_Click(object sender, EventArgs e)
+        {
+            TabPage SaleManager = new TabPage("Sale");
+            frmSale frmSale = new frmSale();
+            PrepareChildForm(frmSale);
+            SaleManager.Controls.Add(frmSale);
+            mtabMainMenuHost.TabPages.Add(SaleManager);
             
         }
     }

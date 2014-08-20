@@ -11,19 +11,25 @@ using MetroFramework.Forms;
 
 namespace STmanager
 {
-    public partial class frmProducts : MetroForm
+    public partial class dlgManageEmployee :  MetroForm
     {
-        public frmProducts()
+        public dlgManageEmployee()
         {
             InitializeComponent();
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void dlgManageEmployee_Load(object sender, EventArgs e)
         {
 
-            dlgProductManager dlgProduct = new dlgProductManager();
-            dlgProduct.Show();
-            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrice_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

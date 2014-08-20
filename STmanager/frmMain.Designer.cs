@@ -40,11 +40,10 @@
             this.lblEmployeePermission = new MetroFramework.Controls.MetroLabel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tileProductManagement = new MetroFramework.Controls.MetroTile();
-            this.metroTile2 = new MetroFramework.Controls.MetroTile();
-            this.metroTile3 = new MetroFramework.Controls.MetroTile();
-            this.metroTile4 = new MetroFramework.Controls.MetroTile();
-            this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
-            this.metroTile1 = new MetroFramework.Controls.MetroTile();
+            this.tileEmployeeManagement = new MetroFramework.Controls.MetroTile();
+            this.tileBranchManagement = new MetroFramework.Controls.MetroTile();
+            this.tileSaleManagement = new MetroFramework.Controls.MetroTile();
+            this.tileSaleReport = new MetroFramework.Controls.MetroTile();
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
@@ -62,6 +61,7 @@
             this.metroTile19 = new MetroFramework.Controls.MetroTile();
             this.metroTile20 = new MetroFramework.Controls.MetroTile();
             this.metroTile21 = new MetroFramework.Controls.MetroTile();
+            this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).BeginInit();
             this.mtabMainMenuHost.SuspendLayout();
             this.tpageHome.SuspendLayout();
@@ -170,10 +170,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Controls.Add(this.tileProductManagement);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile2);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile3);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile4);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile1);
+            this.flowLayoutPanel1.Controls.Add(this.tileEmployeeManagement);
+            this.flowLayoutPanel1.Controls.Add(this.tileBranchManagement);
+            this.flowLayoutPanel1.Controls.Add(this.tileSaleManagement);
+            this.flowLayoutPanel1.Controls.Add(this.tileSaleReport);
             this.flowLayoutPanel1.Controls.Add(this.metroTile5);
             this.flowLayoutPanel1.Controls.Add(this.metroTile6);
             this.flowLayoutPanel1.Controls.Add(this.metroTile7);
@@ -208,59 +208,50 @@
             this.tileProductManagement.UseVisualStyleBackColor = true;
             this.tileProductManagement.Click += new System.EventHandler(this.tileProductManagement_Click);
             // 
-            // metroTile2
+            // tileEmployeeManagement
             // 
-            this.metroTile2.ActiveControl = null;
-            this.metroTile2.Location = new System.Drawing.Point(137, 3);
-            this.metroTile2.Name = "metroTile2";
-            this.metroTile2.Size = new System.Drawing.Size(128, 100);
-            this.metroTile2.TabIndex = 1;
-            this.metroTile2.Text = "metroTile2";
-            this.metroTile2.UseSelectable = true;
-            this.metroTile2.UseVisualStyleBackColor = true;
+            this.tileEmployeeManagement.ActiveControl = null;
+            this.tileEmployeeManagement.Location = new System.Drawing.Point(137, 3);
+            this.tileEmployeeManagement.Name = "tileEmployeeManagement";
+            this.tileEmployeeManagement.Size = new System.Drawing.Size(128, 100);
+            this.tileEmployeeManagement.TabIndex = 1;
+            this.tileEmployeeManagement.Text = "Employee";
+            this.tileEmployeeManagement.UseSelectable = true;
+            this.tileEmployeeManagement.UseVisualStyleBackColor = true;
             // 
-            // metroTile3
+            // tileBranchManagement
             // 
-            this.metroTile3.ActiveControl = null;
-            this.metroTile3.Location = new System.Drawing.Point(271, 3);
-            this.metroTile3.Name = "metroTile3";
-            this.metroTile3.Size = new System.Drawing.Size(128, 100);
-            this.metroTile3.TabIndex = 2;
-            this.metroTile3.Text = "metroTile3";
-            this.metroTile3.UseSelectable = true;
-            this.metroTile3.UseVisualStyleBackColor = true;
+            this.tileBranchManagement.ActiveControl = null;
+            this.tileBranchManagement.Location = new System.Drawing.Point(271, 3);
+            this.tileBranchManagement.Name = "tileBranchManagement";
+            this.tileBranchManagement.Size = new System.Drawing.Size(128, 100);
+            this.tileBranchManagement.TabIndex = 2;
+            this.tileBranchManagement.Text = "Branch";
+            this.tileBranchManagement.UseSelectable = true;
+            this.tileBranchManagement.UseVisualStyleBackColor = true;
             // 
-            // metroTile4
+            // tileSaleManagement
             // 
-            this.metroTile4.ActiveControl = null;
-            this.metroTile4.Location = new System.Drawing.Point(405, 3);
-            this.metroTile4.Name = "metroTile4";
-            this.metroTile4.Size = new System.Drawing.Size(128, 100);
-            this.metroTile4.TabIndex = 3;
-            this.metroTile4.Text = "metroTile4";
-            this.metroTile4.UseSelectable = true;
-            this.metroTile4.UseVisualStyleBackColor = true;
+            this.tileSaleManagement.ActiveControl = null;
+            this.tileSaleManagement.Location = new System.Drawing.Point(405, 3);
+            this.tileSaleManagement.Name = "tileSaleManagement";
+            this.tileSaleManagement.Size = new System.Drawing.Size(128, 100);
+            this.tileSaleManagement.TabIndex = 3;
+            this.tileSaleManagement.Text = "Sale";
+            this.tileSaleManagement.UseSelectable = true;
+            this.tileSaleManagement.UseVisualStyleBackColor = true;
+            this.tileSaleManagement.Click += new System.EventHandler(this.tileSaleManagement_Click);
             // 
-            // lblCurrentEmpName
+            // tileSaleReport
             // 
-            this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblCurrentEmpName.Location = new System.Drawing.Point(375, 34);
-            this.lblCurrentEmpName.Name = "lblCurrentEmpName";
-            this.lblCurrentEmpName.Size = new System.Drawing.Size(317, 23);
-            this.lblCurrentEmpName.TabIndex = 29;
-            this.lblCurrentEmpName.Text = "EmpName EmpLast";
-            this.lblCurrentEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // metroTile1
-            // 
-            this.metroTile1.ActiveControl = null;
-            this.metroTile1.Location = new System.Drawing.Point(3, 109);
-            this.metroTile1.Name = "metroTile1";
-            this.metroTile1.Size = new System.Drawing.Size(128, 100);
-            this.metroTile1.TabIndex = 4;
-            this.metroTile1.Text = "metroTile1";
-            this.metroTile1.UseSelectable = true;
-            this.metroTile1.UseVisualStyleBackColor = true;
+            this.tileSaleReport.ActiveControl = null;
+            this.tileSaleReport.Location = new System.Drawing.Point(3, 109);
+            this.tileSaleReport.Name = "tileSaleReport";
+            this.tileSaleReport.Size = new System.Drawing.Size(128, 100);
+            this.tileSaleReport.TabIndex = 4;
+            this.tileSaleReport.Text = "Sale Report";
+            this.tileSaleReport.UseSelectable = true;
+            this.tileSaleReport.UseVisualStyleBackColor = true;
             // 
             // metroTile5
             // 
@@ -449,6 +440,16 @@
             this.metroTile21.UseSelectable = true;
             this.metroTile21.UseVisualStyleBackColor = true;
             // 
+            // lblCurrentEmpName
+            // 
+            this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblCurrentEmpName.Location = new System.Drawing.Point(375, 34);
+            this.lblCurrentEmpName.Name = "lblCurrentEmpName";
+            this.lblCurrentEmpName.Size = new System.Drawing.Size(317, 23);
+            this.lblCurrentEmpName.TabIndex = 29;
+            this.lblCurrentEmpName.Text = "EmpName EmpLast";
+            this.lblCurrentEmpName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -465,6 +466,7 @@
             this.Style = MetroFramework.MetroColorStyle.Orange;
             this.Text = "SmartTime Manager Client";
             this.TopMost = true;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).EndInit();
             this.mtabMainMenuHost.ResumeLayout(false);
@@ -489,10 +491,10 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Label label1;
         private MetroFramework.Controls.MetroTile tileProductManagement;
-        private MetroFramework.Controls.MetroTile metroTile2;
-        private MetroFramework.Controls.MetroTile metroTile3;
-        private MetroFramework.Controls.MetroTile metroTile4;
-        private MetroFramework.Controls.MetroTile metroTile1;
+        private MetroFramework.Controls.MetroTile tileEmployeeManagement;
+        private MetroFramework.Controls.MetroTile tileBranchManagement;
+        private MetroFramework.Controls.MetroTile tileSaleManagement;
+        private MetroFramework.Controls.MetroTile tileSaleReport;
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile7;

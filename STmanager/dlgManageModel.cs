@@ -11,19 +11,16 @@ using MetroFramework.Forms;
 
 namespace STmanager
 {
-    public partial class frmProducts : MetroForm
+    public partial class dlgManageModel : MetroForm
+
     {
-        public frmProducts()
+        public dlgManageModel()
         {
             InitializeComponent();
         }
 
-        private void metroTile1_Click(object sender, EventArgs e)
+        private void dlgManageModel_Load(object sender, EventArgs e)
         {
-
-            dlgProductManager dlgProduct = new dlgProductManager();
-            dlgProduct.Show();
-            
 
         }
     }
