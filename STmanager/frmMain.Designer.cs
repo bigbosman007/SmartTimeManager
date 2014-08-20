@@ -47,20 +47,6 @@
             this.metroTile5 = new MetroFramework.Controls.MetroTile();
             this.metroTile6 = new MetroFramework.Controls.MetroTile();
             this.metroTile7 = new MetroFramework.Controls.MetroTile();
-            this.metroTile8 = new MetroFramework.Controls.MetroTile();
-            this.metroTile9 = new MetroFramework.Controls.MetroTile();
-            this.metroTile10 = new MetroFramework.Controls.MetroTile();
-            this.metroTile11 = new MetroFramework.Controls.MetroTile();
-            this.metroTile12 = new MetroFramework.Controls.MetroTile();
-            this.metroTile13 = new MetroFramework.Controls.MetroTile();
-            this.metroTile14 = new MetroFramework.Controls.MetroTile();
-            this.metroTile15 = new MetroFramework.Controls.MetroTile();
-            this.metroTile16 = new MetroFramework.Controls.MetroTile();
-            this.metroTile17 = new MetroFramework.Controls.MetroTile();
-            this.metroTile18 = new MetroFramework.Controls.MetroTile();
-            this.metroTile19 = new MetroFramework.Controls.MetroTile();
-            this.metroTile20 = new MetroFramework.Controls.MetroTile();
-            this.metroTile21 = new MetroFramework.Controls.MetroTile();
             this.lblCurrentEmpName = new MetroFramework.Controls.MetroLabel();
             ((System.ComponentModel.ISupportInitialize)(this.msmFrmMain)).BeginInit();
             this.mtabMainMenuHost.SuspendLayout();
@@ -177,20 +163,6 @@
             this.flowLayoutPanel1.Controls.Add(this.metroTile5);
             this.flowLayoutPanel1.Controls.Add(this.metroTile6);
             this.flowLayoutPanel1.Controls.Add(this.metroTile7);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile8);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile9);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile10);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile11);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile12);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile13);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile14);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile15);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile16);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile17);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile18);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile19);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile20);
-            this.flowLayoutPanel1.Controls.Add(this.metroTile21);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(74, 163);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(628, 300);
@@ -286,160 +258,6 @@
             this.metroTile7.UseSelectable = true;
             this.metroTile7.UseVisualStyleBackColor = true;
             // 
-            // metroTile8
-            // 
-            this.metroTile8.ActiveControl = null;
-            this.metroTile8.Location = new System.Drawing.Point(3, 215);
-            this.metroTile8.Name = "metroTile8";
-            this.metroTile8.Size = new System.Drawing.Size(128, 100);
-            this.metroTile8.TabIndex = 8;
-            this.metroTile8.Text = "metroTile8";
-            this.metroTile8.UseSelectable = true;
-            this.metroTile8.UseVisualStyleBackColor = true;
-            // 
-            // metroTile9
-            // 
-            this.metroTile9.ActiveControl = null;
-            this.metroTile9.Location = new System.Drawing.Point(137, 215);
-            this.metroTile9.Name = "metroTile9";
-            this.metroTile9.Size = new System.Drawing.Size(128, 100);
-            this.metroTile9.TabIndex = 9;
-            this.metroTile9.Text = "metroTile9";
-            this.metroTile9.UseSelectable = true;
-            this.metroTile9.UseVisualStyleBackColor = true;
-            // 
-            // metroTile10
-            // 
-            this.metroTile10.ActiveControl = null;
-            this.metroTile10.Location = new System.Drawing.Point(271, 215);
-            this.metroTile10.Name = "metroTile10";
-            this.metroTile10.Size = new System.Drawing.Size(128, 100);
-            this.metroTile10.TabIndex = 10;
-            this.metroTile10.Text = "metroTile10";
-            this.metroTile10.UseSelectable = true;
-            this.metroTile10.UseVisualStyleBackColor = true;
-            // 
-            // metroTile11
-            // 
-            this.metroTile11.ActiveControl = null;
-            this.metroTile11.Location = new System.Drawing.Point(405, 215);
-            this.metroTile11.Name = "metroTile11";
-            this.metroTile11.Size = new System.Drawing.Size(128, 100);
-            this.metroTile11.TabIndex = 11;
-            this.metroTile11.Text = "metroTile11";
-            this.metroTile11.UseSelectable = true;
-            this.metroTile11.UseVisualStyleBackColor = true;
-            // 
-            // metroTile12
-            // 
-            this.metroTile12.ActiveControl = null;
-            this.metroTile12.Location = new System.Drawing.Point(3, 321);
-            this.metroTile12.Name = "metroTile12";
-            this.metroTile12.Size = new System.Drawing.Size(128, 100);
-            this.metroTile12.TabIndex = 12;
-            this.metroTile12.Text = "metroTile12";
-            this.metroTile12.UseSelectable = true;
-            this.metroTile12.UseVisualStyleBackColor = true;
-            // 
-            // metroTile13
-            // 
-            this.metroTile13.ActiveControl = null;
-            this.metroTile13.Location = new System.Drawing.Point(137, 321);
-            this.metroTile13.Name = "metroTile13";
-            this.metroTile13.Size = new System.Drawing.Size(128, 100);
-            this.metroTile13.TabIndex = 13;
-            this.metroTile13.Text = "metroTile13";
-            this.metroTile13.UseSelectable = true;
-            this.metroTile13.UseVisualStyleBackColor = true;
-            // 
-            // metroTile14
-            // 
-            this.metroTile14.ActiveControl = null;
-            this.metroTile14.Location = new System.Drawing.Point(271, 321);
-            this.metroTile14.Name = "metroTile14";
-            this.metroTile14.Size = new System.Drawing.Size(128, 100);
-            this.metroTile14.TabIndex = 14;
-            this.metroTile14.Text = "metroTile14";
-            this.metroTile14.UseSelectable = true;
-            this.metroTile14.UseVisualStyleBackColor = true;
-            // 
-            // metroTile15
-            // 
-            this.metroTile15.ActiveControl = null;
-            this.metroTile15.Location = new System.Drawing.Point(405, 321);
-            this.metroTile15.Name = "metroTile15";
-            this.metroTile15.Size = new System.Drawing.Size(128, 100);
-            this.metroTile15.TabIndex = 15;
-            this.metroTile15.Text = "metroTile15";
-            this.metroTile15.UseSelectable = true;
-            this.metroTile15.UseVisualStyleBackColor = true;
-            // 
-            // metroTile16
-            // 
-            this.metroTile16.ActiveControl = null;
-            this.metroTile16.Location = new System.Drawing.Point(3, 427);
-            this.metroTile16.Name = "metroTile16";
-            this.metroTile16.Size = new System.Drawing.Size(128, 100);
-            this.metroTile16.TabIndex = 16;
-            this.metroTile16.Text = "metroTile16";
-            this.metroTile16.UseSelectable = true;
-            this.metroTile16.UseVisualStyleBackColor = true;
-            // 
-            // metroTile17
-            // 
-            this.metroTile17.ActiveControl = null;
-            this.metroTile17.Location = new System.Drawing.Point(137, 427);
-            this.metroTile17.Name = "metroTile17";
-            this.metroTile17.Size = new System.Drawing.Size(128, 100);
-            this.metroTile17.TabIndex = 17;
-            this.metroTile17.Text = "metroTile17";
-            this.metroTile17.UseSelectable = true;
-            this.metroTile17.UseVisualStyleBackColor = true;
-            // 
-            // metroTile18
-            // 
-            this.metroTile18.ActiveControl = null;
-            this.metroTile18.Location = new System.Drawing.Point(271, 427);
-            this.metroTile18.Name = "metroTile18";
-            this.metroTile18.Size = new System.Drawing.Size(128, 100);
-            this.metroTile18.TabIndex = 18;
-            this.metroTile18.Text = "metroTile18";
-            this.metroTile18.UseSelectable = true;
-            this.metroTile18.UseVisualStyleBackColor = true;
-            // 
-            // metroTile19
-            // 
-            this.metroTile19.ActiveControl = null;
-            this.metroTile19.Location = new System.Drawing.Point(405, 427);
-            this.metroTile19.Name = "metroTile19";
-            this.metroTile19.Size = new System.Drawing.Size(128, 100);
-            this.metroTile19.TabIndex = 19;
-            this.metroTile19.Text = "metroTile19";
-            this.metroTile19.UseSelectable = true;
-            this.metroTile19.UseVisualStyleBackColor = true;
-            // 
-            // metroTile20
-            // 
-            this.metroTile20.ActiveControl = null;
-            this.metroTile20.Location = new System.Drawing.Point(3, 533);
-            this.metroTile20.Name = "metroTile20";
-            this.metroTile20.Size = new System.Drawing.Size(128, 100);
-            this.metroTile20.TabIndex = 20;
-            this.metroTile20.Text = "metroTile20";
-            this.metroTile20.UseSelectable = true;
-            this.metroTile20.UseVisualStyleBackColor = true;
-            // 
-            // metroTile21
-            // 
-            this.metroTile21.ActiveControl = null;
-            this.metroTile21.Location = new System.Drawing.Point(137, 533);
-            this.metroTile21.Name = "metroTile21";
-            this.metroTile21.Size = new System.Drawing.Size(128, 100);
-            this.metroTile21.TabIndex = 21;
-            this.metroTile21.Text = "metroTile21";
-            this.metroTile21.UseSelectable = true;
-            this.metroTile21.UseVisualStyleBackColor = true;
-            // 
             // lblCurrentEmpName
             // 
             this.lblCurrentEmpName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -498,19 +316,5 @@
         private MetroFramework.Controls.MetroTile metroTile5;
         private MetroFramework.Controls.MetroTile metroTile6;
         private MetroFramework.Controls.MetroTile metroTile7;
-        private MetroFramework.Controls.MetroTile metroTile8;
-        private MetroFramework.Controls.MetroTile metroTile9;
-        private MetroFramework.Controls.MetroTile metroTile10;
-        private MetroFramework.Controls.MetroTile metroTile11;
-        private MetroFramework.Controls.MetroTile metroTile12;
-        private MetroFramework.Controls.MetroTile metroTile13;
-        private MetroFramework.Controls.MetroTile metroTile14;
-        private MetroFramework.Controls.MetroTile metroTile15;
-        private MetroFramework.Controls.MetroTile metroTile16;
-        private MetroFramework.Controls.MetroTile metroTile17;
-        private MetroFramework.Controls.MetroTile metroTile18;
-        private MetroFramework.Controls.MetroTile metroTile19;
-        private MetroFramework.Controls.MetroTile metroTile20;
-        private MetroFramework.Controls.MetroTile metroTile21;
     }
 }
